@@ -29,10 +29,14 @@ bygget fra `samt-bu-docs` med flere innholdsrepoer montert som Hugo-moduler.
 | `samt-bu-files` | Filer (dokumenter o.l.) som lenkes fra nettstedet |
 | `Oppgaver` | Oppgaver på tvers av delprosjekter |
 | `samt-x.github.io` | GitHub Pages for organisasjonen |
+| `samt-bu-archi-models` | ArchiMate-modeller (`.archimate`) og målbilder – privat arbeidsmateriale, ikke i docs |
+| `kode-archiscripts` | jArchi-skriptbibliotek for Archi |
+| `information-models` | Felles informasjonsmodeller utviklet i SAMT-BU |
+| `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet – privat, ikke i docs |
+| `samt-bu-architecture` | Tomt repo per 2026-09-30 (`pull-all` gir feilmelding her inntil første commit) |
 | `demo-repository` | GitHubs demo-repo (privat, ikke i bruk) |
 
-Finnes i orgen men er ikke klonet lokalt per 2026-09-30: `samt-bu-archi-models` (privat),
-`samt-bu-intern` (privat), `samt-bu-architecture`, `kode-archiscripts`, `information-models`.
+Alle repoer i orgen er klonet lokalt per 2026-09-30.
 
 ## Skript i roten
 
