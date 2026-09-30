@@ -16,27 +16,47 @@ bygget fra `samt-bu-docs` med flere innholdsrepoer montert som Hugo-moduler.
 
 ## Repoer
 
-| Repo | Rolle |
-|---|---|
-| `samt-bu-docs` | Hovednettstedet (Hugo). Har egen `CLAUDE.md` – les den ved arbeid der. |
-| `hugo-theme-samt-bu` | Hugo-tema (basert på Docdock/Altinn), submodule i `samt-bu-docs` |
-| `samt-bu-drafts` | Hugo-modul: innspill |
-| `team-architecture` | Hugo-modul: arkitektur |
-| `team-semantics` | Hugo-modul: Team Semantikk |
-| `samt-bu-market-engagement` | Hugo-modul: ekstern markedsdialog |
-| `samt-bu-pilot-1` … `-4` | Hugo-moduler: pilotene |
-| `solution-samt-bu-docs` | Teknisk dokumentasjon/løsningsbeskrivelse for docs-plattformen |
-| `samt-bu-files` | Filer (dokumenter o.l.) som lenkes fra nettstedet |
-| `Oppgaver` | Oppgaver på tvers av delprosjekter |
-| `samt-x.github.io` | GitHub Pages for organisasjonen |
-| `samt-bu-archi-models` | ArchiMate-modeller (`.archimate`) og målbilder – privat arbeidsmateriale, ikke i docs |
-| `kode-archiscripts` | jArchi-skriptbibliotek for Archi |
-| `information-models` | Felles informasjonsmodeller utviklet i SAMT-BU |
-| `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet – privat, ikke i docs |
-| `samt-bu-architecture` | Tomt repo per 2026-09-30 (`pull-all` gir feilmelding her inntil første commit) |
-| `demo-repository` | GitHubs demo-repo (privat, ikke i bruk) |
+Kartlagt 2026-09-30 fra README-er, `hugo.toml` og innhold. Sjekk mot kilden ved tvil.
 
-Alle repoer i orgen er klonet lokalt per 2026-09-30.
+### Nettstedet docs.samt-bu.no
+
+`samt-bu-docs` er hovedrepoet. Det har egen `CLAUDE.md`, som du skal lese ved arbeid der.
+Innholdsrepoene under er **Hugo-moduler** (`go.mod` + `content/`): `samt-bu-docs` henter
+dem via `[[module.imports]]` i `hugo.toml` og monterer `content/` på stien som står i tabellen.
+Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
+
+| Repo | Montert på (under `content/`) | Innhold |
+|---|---|---|
+| `samt-bu-docs` | – (eget innhold) | Nettstedet: `hugo.toml`, egne seksjoner (behov, innsikt, prosjektstyring, om …), Cloudflare-oppsett |
+| `hugo-theme-samt-bu` | – | Tema (Docdock/Altinn-basert). **Git-submodule** i `samt-bu-docs/themes/`, ikke Hugo-modul. README er fortsatt Altinns. |
+| `team-architecture` | `arkitektur/overordnet-arkitektur` | Overordnet arkitektur, arkitekturstyring |
+| `team-semantics` | `arkitektur/informasjonsarkitektur` | Team Semantikk – informasjonsarkitektur (lite innhold foreløpig) |
+| `samt-bu-pilot-1` … `-4` | `pilotering/pilot-1` … `-4` | Én modul per pilot (brukerreiser, arkitektur, juss …) |
+| `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
+| `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
+| `solution-samt-bu-docs` | `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
+
+Innholdsmodulene får automatiske commits («Auto: oppdater lastmod i frontmatter [skip ci]»),
+så du bør pulle før du endrer noe.
+
+### Øvrige repoer
+
+| Repo | Innhold |
+|---|---|
+| `samt-bu-files` | Dokumentarkiv (Word/PDF): `drafts/`, `contributions/`, `library/`, `project-files/`. Offentlig repo. Office-filer lenkes via Office Online-mønsteret i brukerens globale CLAUDE.md. |
+| `Oppgaver` | Oppgaver på tvers av delprosjekter. Ligger som **GitHub Issues** (64 per 2026-09-30); repoet har bare README. |
+| `information-models` | Felles informasjonsmodeller som OWL/SHACL (`models/person/`). Lite aktivt siden 2026-03. |
+| `samt-bu-archi-models` | ArchiMate-modeller og målbilder, med Python-skript for generering og reparasjon. **Privat arbeidsmateriale, ikke i docs.** Se merknad under. |
+| `kode-archiscripts` | jArchi-skriptbibliotek (ca. 280 `.ajs`-skript, kjerne i `common/`). Flyttet fra `nasjonal-arkitektur` 2026-08-17. |
+| `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet. **Privat.** Bare README foreløpig. |
+| `samt-x.github.io` | Enkel landingsside for orgen. Lenker til den gamle adressen `samt-bu.github.io/samt-bu-docs/`, ikke `docs.samt-bu.no`, så den er trolig utdatert. |
+| `samt-bu-architecture` | Tomt repo, uten commits. `pull-all` feiler her til det får innhold eller slettes. |
+| `demo-repository` | GitHubs standard demo-repo. Privat og ikke i bruk. |
+
+**Merknad om `samt-bu-archi-models`:** README-en sier at klonen hører hjemme i
+`S:\app-data\archi\archi-models\samt-bu-archi-models\`, og der finnes det også en klon.
+Kopien i dette workspacet er nummer to. Rediger bare i én av dem, helst den under
+`archi-models`, og pull før bruk.
 
 ## Skript i roten
 
