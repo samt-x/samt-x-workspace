@@ -1,0 +1,14 @@
+# Whitelist: ignorer alt, og ta bare med workspace-filer eksplisitt.
+# Under-repoene (samt-bu-docs/, team-*/ osv.) er egne git-repoer og skal
+# ALDRI committes her – dette fanger også opp nye kloner automatisk.
+/*
+!/.gitignore
+!/.gitattributes
+!/CLAUDE.md
+!/README.md
+!/*.sh
+!/*.bat
+!/*.py
+!/.claude/
+/.claude/*
+!/.claude/settings.json
