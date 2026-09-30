@@ -46,17 +46,17 @@ så du bør pulle før du endrer noe.
 | `samt-bu-files` | Dokumentarkiv (Word/PDF): `drafts/`, `contributions/`, `library/`, `project-files/`. Offentlig repo. Office-filer lenkes via Office Online-mønsteret i brukerens globale CLAUDE.md. |
 | `Oppgaver` | Oppgaver på tvers av delprosjekter. Ligger som **GitHub Issues** (64 per 2026-09-30); repoet har bare README. |
 | `information-models` | Felles informasjonsmodeller som OWL/SHACL (`models/person/`). Lite aktivt siden 2026-03. |
-| `samt-bu-archi-models` | ArchiMate-modeller og målbilder, med Python-skript for generering og reparasjon. **Privat arbeidsmateriale, ikke i docs.** Se merknad under. |
+| `samt-bu-archi-models` | ArchiMate-modeller og målbilder, med Python-skript for generering og reparasjon. **Privat arbeidsmateriale, ikke i docs.** Klones **ikke** her, se merknad under. |
 | `kode-archiscripts` | jArchi-skriptbibliotek (ca. 280 `.ajs`-skript, kjerne i `common/`). Flyttet fra `nasjonal-arkitektur` 2026-08-17. |
 | `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet. **Privat.** Bare README foreløpig. |
 | `samt-x.github.io` | Enkel landingsside for orgen. Lenker til den gamle adressen `samt-bu.github.io/samt-bu-docs/`, ikke `docs.samt-bu.no`, så den er trolig utdatert. |
 | `samt-bu-architecture` | Tomt repo, uten commits. `pull-all` feiler her til det får innhold eller slettes. |
 | `demo-repository` | GitHubs standard demo-repo. Privat og ikke i bruk. |
 
-**Merknad om `samt-bu-archi-models`:** README-en sier at klonen hører hjemme i
-`S:\app-data\archi\archi-models\samt-bu-archi-models\`, og der finnes det også en klon.
-Kopien i dette workspacet er nummer to. Rediger bare i én av dem, helst den under
-`archi-models`, og pull før bruk.
+**Merknad om `samt-bu-archi-models`:** Den eneste klonen ligger i
+`S:\app-data\archi\archi-models\samt-bu-archi-models\`, sammen med de andre Archi-prosjektene.
+Ikke klon repoet inn i dette workspacet. En kopi ble laget og slettet igjen 2026-09-30.
+`pull-all`/`sync-all` dekker ikke denne klonen, så den må pulles for seg.
 
 ## Skript i roten
 
