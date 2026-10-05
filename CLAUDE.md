@@ -50,7 +50,7 @@ så du bør pulle før du endrer noe.
 | `kode-archiscripts` | jArchi-skriptbibliotek (ca. 280 `.ajs`-skript, kjerne i `common/`). Flyttet fra `nasjonal-arkitektur` 2026-08-17. |
 | `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet. **Privat.** Bare README foreløpig. |
 | `samt-x.github.io` | Enkel landingsside for orgen. Lenker til den gamle adressen `samt-bu.github.io/samt-bu-docs/`, ikke `docs.samt-bu.no`, så den er trolig utdatert. |
-| `samt-bu-architecture` | Oppgaverepo for generisk arkitektur og sluttleveransen (rammeverk for datasentrisk tjenesteutvikling), holdt adskilt fra pilotenes oppgaver i `Oppgaver`. Bare **GitHub Issues** (27 per 2026-10-03), ingen commits, så `pull-all` gir feilmelding her til første commit. #13–#27 er fra arkitekturgruppas møte 2026-10-02 og ligger i Project #5 «SAMT-BU rammeverk og generisk arkitektur». #1–#12 er Kjerstis, koblet til Project #8 «Arkitektur»; avklares med henne. |
+| `samt-bu-architecture` | Oppgaverepo for generisk arkitektur og sluttleveransen (rammeverk for datasentrisk tjenesteutvikling), holdt adskilt fra pilotenes oppgaver i `Oppgaver`. Bare **GitHub Issues**, ingen commits, så `pull-all` gir feilmelding her til første commit. Oversikt i Project 5 «SAMT-BU rammeverk og generisk arkitektur». Issues starter på #13: Kjerstis første oppsett (`#1`–`#12` og Project 8 «Arkitektur») ble slettet 2026-10-05 etter avtale, med spor i #31. Issue-konvensjon foreslått i #32. |
 | `demo-repository` | GitHubs standard demo-repo. Privat og ikke i bruk. |
 
 **Merknad om `samt-bu-archi-models`:** Den eneste klonen ligger i
