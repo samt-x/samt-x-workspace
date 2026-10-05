@@ -65,6 +65,48 @@ Ikke klon repoet inn i dette workspacet. En kopi ble laget og slettet igjen 2026
 - `reweight_content.py` – renummererer `weight:` i `_index.*.md` i innholdsmodulene.
   Stiene er hardkodet til `S:/app-data/github/samt-x-repos/...`.
 
+## Sesjonsrutiner
+
+Fra 2026-10-05 startes alle sesjoner fra **denne mappen**, også når arbeidet gjelder
+`samt-bu-docs`. Claude Codes minne er knyttet til startmappen, så docs-minnet
+(sesjon 1–82, trigger-frasene, alle prosjektnotater) lastes **ikke** automatisk herfra.
+Det må leses eksplisitt.
+
+| Minne | Sti | Innhold |
+|---|---|---|
+| Docs-minnet | `C:\Users\Win11_local\.claude\projects\S--app-data-github-samt-x-repos-samt-bu-docs\memory\` | Nettstedet, Archi, caser, målbilder, sesjonshistorikk |
+| Workspace-minnet | `C:\Users\Win11_local\.claude\projects\S--app-data-github-samt-x-repos\memory\` (autolastet) | GitHub-orgen, Projects, arbeid på tvers |
+| Backup | `S:\app-data\github\erikhag1git-repos\claude-memory\` (`samt-bu-docs\` og `samt-x-repos\`) | Kopi av begge |
+
+Den detaljerte prosedyren står i docs-minnets `session-start-prompts.md`. Følg den,
+med tilpasningene under.
+
+### «Start sesjon»
+
+1. Les `C:\Users\Win11_local\.claude\CLAUDE.md`.
+2. Les fra docs-minnet: `MEMORY.md`, `critical-notes.md`, `project_neste-sesjon.md`
+   og `session-start-prompts.md`.
+3. Les veikartet (`solution-samt-bu-docs/content/veikart/`, alle `_index.nb.md`).
+4. Kjør `git status -sb` i **alle** under-repoene, ikke bare docs.
+5. List åpne issues i `solution-samt-bu-docs` (teknisk backlog for docs) og åpne
+   oppgaver i Project 5 (`samt-bu-architecture`).
+6. Sjekk at backup er i sync med **begge** minnemappene.
+7. Bekreft hvilke filer som er lest, og gi en kort status.
+
+### «Avslutt sesjon»
+
+Som i `session-start-prompts.md`, men:
+
+- **Git:** commit og push i hvert berørte repo, også workspace-repoet.
+- **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, generisk arkitektur →
+  `samt-bu-architecture`, piloter → `Oppgaver`. Lukk alltid med en sluttkommentar om
+  resultatet. Administrative endringer i repo/Projects får et `chore`-issue i
+  `samt-bu-architecture` som spor.
+- **Minne:** docs-spesifikt i docs-minnet, GitHub-org og arbeid på tvers i workspace-minnet.
+  Sesjonshistorikken (`project_sesjonshistorikk.md` i docs-minnet) er felles og har én nummerering.
+- **Backup:** kopier begge minnemappene til `claude-memory`, commit og push.
+- **Sesjonslogg:** `save-session-log.py` finner nyeste samtale uansett startmappe og virker herfra.
+
 ## Arbeidsregler
 
 - Git-kommandoer mot et under-repo: bruk `git -C <repo> ...`, ikke `cd`.
