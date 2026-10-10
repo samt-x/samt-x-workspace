@@ -34,8 +34,8 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `samt-bu-pilot-1` … `-6` | `pilotering/pilot-1` … `-6` | Én modul per pilot (brukerreiser, arkitektur, juss …). Pilot 5 (Id-er i utdanning, Sikt) og Pilot 6 (Foreldres tilgang til data) opprettet 2026-10-10, spor i `samt-bu-common-tasks#70`. Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (se `samt-bu-common-tasks` under). |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
-| `solution-samt-bu-docs` | `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
-| `solution-task-management` | `prosjektleveranser/loesninger/styringsloesninger/oppgavestyring` | Oppgavestyring som egen løsning (repo↔Project, konvensjoner, API-fallgruver), opprettet 2026-10-10. Har også **issues for oppgavestyringen**, blant annet de tidligere `samt-bu-architecture` nr. 28 og 32 (nå #1 og #2, fortsatt i Project 5). Kategorien «Styringsløsninger» er lokal i `samt-bu-docs`. |
+| `solution-samt-bu-docs` | `prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
+| `solution-task-management` | `prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring` | Oppgavestyring som egen løsning (repo↔Project, konvensjoner, API-fallgruver), opprettet 2026-10-10. Har også **issues for oppgavestyringen**, blant annet de tidligere `samt-bu-architecture` nr. 28 og 32 (nå #1 og #2, fortsatt i Project 5). Kategorien «Samhandlingsplattform» (med siden Plattformvalg: GitHub) er lokal i `samt-bu-docs`. Den erstattet «CMS-løsninger» og «Styringsløsninger» 2026-10-11. |
 
 Innholdsmodulene får automatiske commits («Auto: oppdater lastmod i frontmatter [skip ci]»),
 så du bør pulle før du endrer noe.
