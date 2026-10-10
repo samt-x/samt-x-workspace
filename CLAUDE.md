@@ -31,7 +31,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `hugo-theme-samt-bu` | – | Tema (Docdock/Altinn-basert). **Git-submodule** i `samt-bu-docs/themes/`, ikke Hugo-modul. README er fortsatt Altinns. |
 | `team-architecture` | `arkitektur/overordnet-arkitektur` | Overordnet arkitektur, arkitekturstyring |
 | `team-semantics` | `arkitektur/informasjonsarkitektur` | Team Semantikk – informasjonsarkitektur (lite innhold foreløpig) |
-| `samt-bu-pilot-1` … `-4` | `pilotering/pilot-1` … `-4` | Én modul per pilot (brukerreiser, arkitektur, juss …). Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (overgang pågår, se under). |
+| `samt-bu-pilot-1` … `-4` | `pilotering/pilot-1` … `-4` | Én modul per pilot (brukerreiser, arkitektur, juss …). Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (se `samt-bu-common-tasks` under). |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
 | `solution-samt-bu-docs` | `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
@@ -44,7 +44,7 @@ så du bør pulle før du endrer noe.
 | Repo | Innhold |
 |---|---|
 | `samt-bu-files` | Dokumentarkiv (Word/PDF): `drafts/`, `contributions/`, `library/`, `project-files/`. Offentlig repo. Office-filer lenkes via Office Online-mønsteret i brukerens globale CLAUDE.md. |
-| `samt-bu-common-tasks` | **Felles oppgaver** på tvers av pilotene, som GitHub Issues; repoet har bare README. Het `Oppgaver` til 2026-10-10 (gamle adresser sendes videre). Overgangen til ett repo per pilot pågår, med spor i #69: Pilot 1, 2 og 3 er flyttet til `samt-bu-pilot-1` (Project 1), `samt-bu-pilot-2` (Project 2) og `samt-bu-pilot-3` (Project 4), og Pilot 4 (Project 3) bruker issues i `samt-bu-docs`. Merk: Project 3 = Pilot 4 og Project 4 = Pilot 3. |
+| `samt-bu-common-tasks` | **Felles oppgaver** på tvers av pilotene, som GitHub Issues; repoet har bare README. Het `Oppgaver` til 2026-10-10 (gamle adresser sendes videre). Overgangen til ett repo per pilot er gjennomført, med spor i #69: Pilot 1, 2 og 3 er flyttet til `samt-bu-pilot-1` (Project 1), `samt-bu-pilot-2` (Project 2) og `samt-bu-pilot-3` (Project 4), og Pilot 4 til `samt-bu-pilot-4` (Project 3). Unntak: to sidekommentarer fra docs-nettstedet (`samt-bu-docs` nr. 97 og 98) står i Project 3, men må ligge i `samt-bu-docs` for at kommentarpanelet på siden skal finne dem. Merk: Project 3 = Pilot 4 og Project 4 = Pilot 3. |
 | `information-models` | Felles informasjonsmodeller som OWL/SHACL (`models/person/`). Lite aktivt siden 2026-03. |
 | `samt-bu-archi-models` | ArchiMate-modeller og målbilder, med Python-skript for generering og reparasjon. **Privat arbeidsmateriale, ikke i docs.** Klones **ikke** her, se merknad under. |
 | `kode-archiscripts` | jArchi-skriptbibliotek (ca. 280 `.ajs`-skript, kjerne i `common/`). Flyttet fra `nasjonal-arkitektur` 2026-08-17. |
