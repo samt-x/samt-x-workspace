@@ -100,8 +100,8 @@ Som i `session-start-prompts.md`, men:
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
 - **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, generisk arkitektur →
   `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
-  resultatet. Administrative endringer i repo/Projects får et `chore`-issue i
-  `samt-bu-architecture` som spor.
+  resultatet. Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
+  repoet endringen gjelder (f.eks. `samt-bu-architecture#31`, `samt-bu-common-tasks#69`).
 - **Minne:** docs-spesifikt i docs-minnet, GitHub-org og arbeid på tvers i workspace-minnet.
   Sesjonshistorikken (`project_sesjonshistorikk.md` i docs-minnet) er felles og har én nummerering.
 - **Backup:** kopier begge minnemappene til `claude-memory`, commit og push.
