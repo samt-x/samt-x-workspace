@@ -35,6 +35,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
 | `solution-samt-bu-docs` | `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
+| `solution-task-management` | `prosjektleveranser/loesninger/styringsloesninger/oppgavestyring` | Oppgavestyring som egen løsning (repo↔Project, konvensjoner, API-fallgruver), opprettet 2026-10-10. Har også **issues for oppgavestyringen**, blant annet de tidligere `samt-bu-architecture` nr. 28 og 32 (nå #1 og #2, fortsatt i Project 5). Kategorien «Styringsløsninger» er lokal i `samt-bu-docs`. |
 
 Innholdsmodulene får automatiske commits («Auto: oppdater lastmod i frontmatter [skip ci]»),
 så du bør pulle før du endrer noe.
@@ -98,7 +99,7 @@ med tilpasningene under.
 Som i `session-start-prompts.md`, men:
 
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
-- **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, generisk arkitektur →
+- **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, oppgavestyringen → `solution-task-management`, generisk arkitektur →
   `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
   resultatet. Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
   repoet endringen gjelder (f.eks. `samt-bu-architecture#31`, `samt-bu-common-tasks#69`).
