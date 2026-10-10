@@ -31,7 +31,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `hugo-theme-samt-bu` | – | Tema (Docdock/Altinn-basert). **Git-submodule** i `samt-bu-docs/themes/`, ikke Hugo-modul. README er fortsatt Altinns. |
 | `team-architecture` | `arkitektur/overordnet-arkitektur` | Overordnet arkitektur, arkitekturstyring |
 | `team-semantics` | `arkitektur/informasjonsarkitektur` | Team Semantikk – informasjonsarkitektur (lite innhold foreløpig) |
-| `samt-bu-pilot-1` … `-4` | `pilotering/pilot-1` … `-4` | Én modul per pilot (brukerreiser, arkitektur, juss …) |
+| `samt-bu-pilot-1` … `-4` | `pilotering/pilot-1` … `-4` | Én modul per pilot (brukerreiser, arkitektur, juss …). Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (overgang pågår, se under). |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
 | `solution-samt-bu-docs` | `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
@@ -44,13 +44,13 @@ så du bør pulle før du endrer noe.
 | Repo | Innhold |
 |---|---|
 | `samt-bu-files` | Dokumentarkiv (Word/PDF): `drafts/`, `contributions/`, `library/`, `project-files/`. Offentlig repo. Office-filer lenkes via Office Online-mønsteret i brukerens globale CLAUDE.md. |
-| `Oppgaver` | Oppgaver på tvers av delprosjekter. Ligger som **GitHub Issues** (64 per 2026-09-30); repoet har bare README. |
+| `samt-bu-common-tasks` | **Felles oppgaver** på tvers av pilotene, som GitHub Issues; repoet har bare README. Het `Oppgaver` til 2026-10-10 (gamle adresser sendes videre). Overgangen til ett repo per pilot pågår, med spor i #69: Pilot 3 er flyttet til `samt-bu-pilot-3` (Project 4). Pilot 1 (Project 1) og Pilot 2 (Project 2) ligger fortsatt her, og Pilot 4 (Project 3) bruker issues i `samt-bu-docs`. Merk: Project 3 = Pilot 4 og Project 4 = Pilot 3. |
 | `information-models` | Felles informasjonsmodeller som OWL/SHACL (`models/person/`). Lite aktivt siden 2026-03. |
 | `samt-bu-archi-models` | ArchiMate-modeller og målbilder, med Python-skript for generering og reparasjon. **Privat arbeidsmateriale, ikke i docs.** Klones **ikke** her, se merknad under. |
 | `kode-archiscripts` | jArchi-skriptbibliotek (ca. 280 `.ajs`-skript, kjerne i `common/`). Flyttet fra `nasjonal-arkitektur` 2026-08-17. |
 | `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet. **Privat.** Bare README foreløpig. |
 | `samt-x.github.io` | Enkel landingsside for orgen. Lenker til den gamle adressen `samt-bu.github.io/samt-bu-docs/`, ikke `docs.samt-bu.no`, så den er trolig utdatert. |
-| `samt-bu-architecture` | Oppgaverepo for generisk arkitektur og sluttleveransen (rammeverk for datasentrisk tjenesteutvikling), holdt adskilt fra pilotenes oppgaver i `Oppgaver`. Bare **GitHub Issues**, ingen commits, så `pull-all` gir feilmelding her til første commit. Oversikt i Project 5 «SAMT-BU rammeverk og generisk arkitektur». Issues starter på #13: Kjerstis første oppsett (`#1`–`#12` og Project 8 «Arkitektur») ble slettet 2026-10-05 etter avtale, med spor i #31. Issue-konvensjon foreslått i #32. |
+| `samt-bu-architecture` | Oppgaverepo for generisk arkitektur og sluttleveransen (rammeverk for datasentrisk tjenesteutvikling), holdt adskilt fra pilotenes oppgaver. Bare **GitHub Issues**, ingen commits, så `pull-all` gir feilmelding her til første commit. Oversikt i Project 5 «SAMT-BU rammeverk og generisk arkitektur». Issues starter på #13: Kjerstis første oppsett (`#1`–`#12` og Project 8 «Arkitektur») ble slettet 2026-10-05 etter avtale, med spor i #31. Issue-konvensjon foreslått i #32. |
 | `demo-repository` | GitHubs standard demo-repo. Privat og ikke i bruk. |
 
 **Merknad om `samt-bu-archi-models`:** Den eneste klonen ligger i
@@ -99,7 +99,7 @@ Som i `session-start-prompts.md`, men:
 
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
 - **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, generisk arkitektur →
-  `samt-bu-architecture`, piloter → `Oppgaver`. Lukk alltid med en sluttkommentar om
+  `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
   resultatet. Administrative endringer i repo/Projects får et `chore`-issue i
   `samt-bu-architecture` som spor.
 - **Minne:** docs-spesifikt i docs-minnet, GitHub-org og arbeid på tvers i workspace-minnet.
