@@ -46,7 +46,7 @@ så du bør pulle før du endrer noe.
 |---|---|
 | `samt-bu-files` | Dokumentarkiv (Word/PDF): `drafts/`, `contributions/`, `library/`, `project-files/`. Offentlig repo. Office-filer lenkes via Office Online-mønsteret i brukerens globale CLAUDE.md. |
 | `samt-bu-common-tasks` | **Felles oppgaver** på tvers av pilotene, som GitHub Issues; repoet har bare README. Het `Oppgaver` til 2026-10-10 (gamle adresser sendes videre). Overgangen til ett repo per pilot er gjennomført, med spor i #69: Pilot 1, 2 og 3 er flyttet til `samt-bu-pilot-1` (Project 1), `samt-bu-pilot-2` (Project 2) og `samt-bu-pilot-3` (Project 4), og Pilot 4 til `samt-bu-pilot-4` (Project 3). Unntak: to sidekommentarer fra docs-nettstedet (`samt-bu-docs` nr. 97 og 98) står i Project 3, men må ligge i `samt-bu-docs` for at kommentarpanelet på siden skal finne dem. Pilot 5 og 6 har Project 9 og 10. Merk: Project 3 = Pilot 4 og Project 4 = Pilot 3. |
-| `information-models` | Felles informasjonsmodeller som OWL/SHACL (`models/person/`). Lite aktivt siden 2026-03. |
+| `information-models` | Felles informasjonsmodeller som OWL/SHACL (`models/person/`). Filene er lite endret siden 2026-03, men oppgavene (issues) er aktive. |
 | `samt-bu-archi-models` | ArchiMate-modeller og målbilder, med Python-skript for generering og reparasjon. **Privat arbeidsmateriale, ikke i docs.** Klones **ikke** her, se merknad under. |
 | `kode-archiscripts` | jArchi-skriptbibliotek (ca. 280 `.ajs`-skript, kjerne i `common/`). Flyttet fra `nasjonal-arkitektur` 2026-08-17. |
 | `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet. **Privat.** Bare README foreløpig. |
