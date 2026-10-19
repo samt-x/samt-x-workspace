@@ -52,7 +52,7 @@ så du bør pulle før du endrer noe.
 | `samt-bu-intern` | Internt arbeidsmateriale for kjerneteamet. **Privat.** Bare README foreløpig. |
 | `samt-x.github.io` | Enkel landingsside for orgen. Lenker til den gamle adressen `samt-bu.github.io/samt-bu-docs/`, ikke `docs.samt-bu.no`, så den er trolig utdatert. |
 | `samt-bu-architecture` | Oppgaverepo for generisk arkitektur og sluttleveransen (rammeverk for datasentrisk tjenesteutvikling), holdt adskilt fra pilotenes oppgaver. Bare **GitHub Issues**, ingen commits, så `pull-all` gir feilmelding her til første commit. Oversikt i Project 5 «SAMT-BU rammeverk og generisk arkitektur». Issues starter på #13: Kjerstis første oppsett (`#1`–`#12` og Project 8 «Arkitektur») ble slettet 2026-10-05 etter avtale, med spor i #31. Issue-konvensjon foreslått i #32. |
-| `samt-bu-portfolio` | Porteføljekort: ett issue per pilot, produkt og arbeidsområde, på Project 13 «SAMT-BU Portfolio» (Status = fase, Category, Owner, Health, Target date). Opprettet 2026-10-19 (B1, `solution-task-management#10`). Holdes utenfor samlebrettet Project 12 «SAMT-BU All tasks», som fylles hver time av Action i `solution-task-management`. |
+| `samt-bu-portfolio` | Porteføljekort: ett issue per pilot, produkt og arbeidsområde, på Project 13 «SAMT-BU Overview – Portfolio» (Status = fase, Category, Owner, Health, Target date). Opprettet 2026-10-19 (B1, `solution-task-management#10`). Holdes utenfor samlebrettet Project 12 «SAMT-BU Overview – All tasks», som fylles hver time av Action i `solution-task-management`. |
 | `demo-repository` | GitHubs standard demo-repo. Privat og ikke i bruk. |
 
 **Merknad om `samt-bu-archi-models`:** Den eneste klonen ligger i
