@@ -110,7 +110,7 @@ Som i `session-start-prompts.md`, men:
 - **Sesjonslogg:** `save-session-log.py` finner nyeste samtale uansett startmappe og virker herfra.
 - **Skjermbilder:** kopier bildene Erik har limt inn fra sesjonens midlertidige mappe
   (`%TEMP%\claude\<prosjektmappe>\<sesjons-id>\images\`, stien står i bildemeldingene) til
-  `S:pp-data\claude\session-images\s<N>\`, med samme nummer som sesjonsloggen. Temp-mappen kan tømmes av
+  `S:\app-data\claude\session-images\s<N>\`, med samme nummer som sesjonsloggen. Temp-mappen kan tømmes av
   Windows, og Claude Code sletter samtalefilene (`.jsonl`) etter 30 dager. Bildene legges **ikke** i `claude-memory`,
   fordi de kan vise innstillinger. Ved prematur avslutning: kopier på nytt ved ekte slutt (overskriver).
 
