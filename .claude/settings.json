@@ -18,7 +18,7 @@
       "Bash(grep *)",
       "PowerShell(git *)",
       "PowerShell(gh *)",
-      "PowerShell(hugo *)",
+      "PowerShell(hugo *)"
     ],
     "ask": [
       "Bash(git push --force*)",
