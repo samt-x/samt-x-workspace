@@ -94,6 +94,19 @@ med tilpasningene under.
    oppgaver i Project 5 (`samt-bu-architecture`).
 6. Sjekk at backup er i sync med **begge** minnemappene.
 7. Bekreft hvilke filer som er lest, og gi en kort status.
+8. Avslutt med **Claude-hint** (under), kort og uendret, som påminnelse til Erik.
+
+### Claude-hint (vises ved «Start sesjon»)
+
+| Hva | Hvordan |
+|---|---|
+| Fortsette forrige samtale | `claude --continue` fra denne mappen · velg fra liste: `claude --resume` |
+| Bytte modus (auto, plan, …) | **Shift+Tab** – modusen står nederst. `defaultMode` er `auto` |
+| Tunge skriptdager | `claude --continue --allowedTools "Bash(python:*)"` (gjelder bare den sesjonen) |
+| Svar på tillatelsesspørsmål | Velg **«Yes»**, ikke «don't ask again» – det lagrer en varig regel |
+| Kjøre en kommando selv | `! <kommando>` – kjører i **Bash**, ikke PowerShell |
+| Gi Claude en mappe til | `/add-dir <sti>` (f.eks. NGI Zero, bare ved behov) |
+| Navngi sesjonen | `/rename <navn>` |
 
 ### «Avslutt sesjon»
 
@@ -113,6 +126,9 @@ Som i `session-start-prompts.md`, men:
   `S:\app-data\claude\session-images\s<N>\`, med samme nummer som sesjonsloggen. Temp-mappen kan tømmes av
   Windows, og Claude Code sletter samtalefilene (`.jsonl`) etter 30 dager. Bildene legges **ikke** i `claude-memory`,
   fordi de kan vise innstillinger. Ved prematur avslutning: kopier på nytt ved ekte slutt (overskriver).
+- **Navn på sesjonen:** Har ikke Erik gitt sesjonen et navn selv, foreslå et kort navn som sier hva som er gjort
+  (f.eks. `s92 Tilganger og org-opprydding`). Claude kan ikke kjøre slash-kommandoer, så gi Erik linjen
+  `/rename <navn>` ferdig til å lime inn. Bruk samme navn i sesjonshistorikken.
 
 ## Arbeidsregler
 

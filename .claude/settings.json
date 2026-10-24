@@ -4,8 +4,6 @@
       "Bash(git *)",
       "Bash(gh *)",
       "Bash(hugo *)",
-      "Bash(python *)",
-      "Bash(py *)",
       "Bash(bash pull-all.sh)",
       "Bash(bash push-all.sh)",
       "Bash(bash sync-all.sh)",
@@ -21,8 +19,6 @@
       "PowerShell(git *)",
       "PowerShell(gh *)",
       "PowerShell(hugo *)",
-      "PowerShell(python *)",
-      "PowerShell(py *)"
     ],
     "ask": [
       "Bash(git push --force*)",
