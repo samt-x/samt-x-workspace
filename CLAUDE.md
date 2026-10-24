@@ -133,6 +133,10 @@ Som i `session-start-prompts.md`, men:
   `S:\app-data\claude\session-images\s<N>\`, med samme nummer som sesjonsloggen. Temp-mappen kan tømmes av
   Windows, og Claude Code sletter samtalefilene (`.jsonl`) etter 30 dager. Bildene legges **ikke** i `claude-memory`,
   fordi de kan vise innstillinger. Ved prematur avslutning: kopier på nytt ved ekte slutt (overskriver).
+- **Utlogging i Chrome-profilen «Claude»:** Minn Erik på det, og tilby å gjøre det selv: først docs.samt-bu.no (avataren →
+  «Logg ut», sletter bare tokenen lokalt), så github.com (avataren → «Sign out» → bekreft). Vent på ja. Er utvidelsen ikke koblet
+  til, eller er profilen ikke brukt i sesjonen, holder det med påminnelsen. Begrunnelse: en innlogget nettleser har alle
+  rettighetene til kontoen, mens `gh`-tokenen er strammet inn (sesjon 92).
 - **Navn på sesjonen:** Har ikke Erik gitt sesjonen et navn selv, foreslå et kort navn som sier hva som er gjort
   (f.eks. `s92 Tilganger og org-opprydding`). Claude kan ikke kjøre slash-kommandoer, så gi Erik linjen
   `/rename <navn>` ferdig til å lime inn. Bruk samme navn i sesjonshistorikken.
