@@ -64,6 +64,8 @@ Ikke klon repoet inn i dette workspacet. En kopi ble laget og slettet igjen 2026
 
 - `pull-all.sh`, `push-all.sh`, `sync-all.sh` (+ `.bat`-innpakninger) – løkker over alle
   undermapper. Foretrekk `sync-all.sh` for toveis synk; den løser aldri konflikter selv.
+- `status-all.sh` (+ `.bat`) – én statuslinje per repo, endrede filer under, endrer ingenting. `--fetch` henter først.
+  Laget 2026-10-24 for at Claude skal slippe løkker over stier, som gir stopp for tillatelse.
 - `reweight_content.py` – renummererer `weight:` i `_index.*.md` i innholdsmodulene.
   Stiene er hardkodet til `S:/app-data/github/samt-x-repos/...`.
 
@@ -89,7 +91,8 @@ med tilpasningene under.
 2. Les fra docs-minnet: `MEMORY.md`, `critical-notes.md`, `project_neste-sesjon.md`
    og `session-start-prompts.md`.
 3. Les veikartet (`solution-samt-bu-docs/content/veikart/`, alle `_index.nb.md`).
-4. Kjør `git status -sb` i **alle** under-repoene, ikke bare docs.
+4. Kjør `bash S:/app-data/github/samt-x-repos/status-all.sh --fetch`. Det viser status for **alle** repoene,
+   også temaet som submodule.
 5. List åpne issues i `solution-samt-bu-docs` (teknisk backlog for docs) og åpne
    oppgaver i Project 5 (`samt-bu-architecture`).
 6. Sjekk at backup er i sync med **begge** minnemappene.
