@@ -93,6 +93,8 @@ med tilpasningene under.
 5. List åpne issues i `solution-samt-bu-docs` (teknisk backlog for docs) og åpne
    oppgaver i Project 5 (`samt-bu-architecture`).
 6. Sjekk at backup er i sync med **begge** minnemappene.
+   Sjekk også utløpet for `gh`-tokenen (`gh api -i rate_limit`, headeren `github-authentication-token-expiration`).
+   Varsle Erik hvis det er under 30 dager igjen. Er headeren borte, er en token uten utløp i bruk – si fra.
 7. Bekreft hvilke filer som er lest, og gi en kort status.
 8. Avslutt med **Claude-hint** (under), kort og uendret, som påminnelse til Erik.
 
@@ -107,6 +109,7 @@ med tilpasningene under.
 | Kjøre en kommando selv | `! <kommando>` – kjører i **Bash**, ikke PowerShell |
 | Gi Claude en mappe til | `/add-dir <sti>` (f.eks. NGI Zero, bare ved behov) |
 | Navngi sesjonen | `/rename <navn>` |
+| Admin-sesjon i GitHub | Eget vindu: `$env:GH_TOKEN = "<admin fra Bitwarden>"; claude --continue` |
 
 ### «Avslutt sesjon»
 
