@@ -110,6 +110,7 @@ med tilpasningene under.
 | Gi Claude en mappe til | `/add-dir <sti>` (f.eks. NGI Zero, bare ved behov) |
 | Navngi sesjonen | `/rename <navn>` |
 | Admin-sesjon i GitHub | Eget vindu: `$env:GH_TOKEN = "<admin fra Bitwarden>"; claude --continue` |
+| Nettleser for Claude | Bare Chrome-profilen **«Claude»** (fersken). Logg inn per oppgave, ut etterpå. Ikke koblet? Klikk stjernen → sjekk innlogging i sidepanelet |
 
 ### «Avslutt sesjon»
 
