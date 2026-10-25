@@ -98,8 +98,12 @@ med tilpasningene under.
 6. Sjekk at backup er i sync med **begge** minnemappene.
    Sjekk også utløpet for `gh`-tokenen (`gh api -i rate_limit`, headeren `github-authentication-token-expiration`).
    Varsle Erik hvis det er under 30 dager igjen. Er headeren borte, er en token uten utløp i bruk – si fra.
-7. Bekreft hvilke filer som er lest, og gi en kort status.
-8. Avslutt med **Claude-hint** (under), kort og uendret, som påminnelse til Erik.
+7. Sjekk innloggingen i Chrome-profilen «Claude», hvis utvidelsen er koblet til: åpne en fane med github.com og en med
+   docs.samt-bu.no, og se om Erik er innlogget. Er han ikke det, la fanene stå på innloggingen: `github.com/login`, og på
+   docs-siden «Endre» → logg inn (popupen kan havne utenfor fanegruppen). Ta GitHub først, så går docs-innloggingen
+   uten passord. Erik skriver passordet selv, aldri Claude. Er utvidelsen ikke koblet til, nevn det kort og gå videre.
+8. Bekreft hvilke filer som er lest, og gi en kort status.
+9. Avslutt med **Claude-hint** (under), kort og uendret, som påminnelse til Erik.
 
 ### Claude-hint (vises ved «Start sesjon»)
 
