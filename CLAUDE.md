@@ -137,9 +137,9 @@ Som i `session-start-prompts.md`, men:
   «Logg ut», sletter bare tokenen lokalt), så github.com (avataren → «Sign out» → bekreft). Vent på ja. Er utvidelsen ikke koblet
   til, eller er profilen ikke brukt i sesjonen, holder det med påminnelsen. Begrunnelse: en innlogget nettleser har alle
   rettighetene til kontoen, mens `gh`-tokenen er strammet inn (sesjon 92).
-- **Navn på sesjonen:** Har ikke Erik gitt sesjonen et navn selv, foreslå et kort navn som sier hva som er gjort
-  (f.eks. `s92 Tilganger og org-opprydding`). Claude kan ikke kjøre slash-kommandoer, så gi Erik linjen
-  `/rename <navn>` ferdig til å lime inn. Bruk samme navn i sesjonshistorikken.
+- **Navn på sesjonen:** Velg selv et kort navn som sier hva som er gjort (f.eks. `s92 Tilganger og org-opprydding`),
+  uten å spørre Erik. Bruk det i sesjonshistorikken, og vis linjen `/rename <navn>` til slutt i avslutningen, ferdig til
+  å lime inn. Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
 
 ## Arbeidsregler
 
