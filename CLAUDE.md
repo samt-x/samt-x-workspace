@@ -126,10 +126,12 @@ med tilpasningene under.
 
 Som i `session-start-prompts.md`, men:
 
+- **Dokumentasjon:** før git, sjekk at hver endring i funksjonalitet i sesjonen har en «Dokumentasjon:»-linje (se Arbeidsregler).
+  Mangler det, gjør vurderingen og oppdateringen nå.
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
 - **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, oppgavestyringen → `solution-task-management`, generisk arkitektur →
   `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
-  resultatet. Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
+  resultatet. **Sluttkommentaren skal ha linjen «Dokumentasjon: …»** (se Arbeidsregler). Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
   repoet endringen gjelder (f.eks. `samt-bu-architecture#31`, `samt-bu-common-tasks#69`).
 - **Minne:** docs-spesifikt i docs-minnet, GitHub-org og arbeid på tvers i workspace-minnet.
   Sesjonshistorikken (`project_sesjonshistorikk.md` i docs-minnet) er felles og har én nummerering.
@@ -153,3 +155,14 @@ Som i `session-start-prompts.md`, men:
 - Git-kommandoer mot et under-repo: bruk `git -C <repo> ...`, ikke `cd`.
 - Endringer i flere repoer: commit og push hvert repo separat.
 - Språk: innhold og commit-meldinger på norsk (bokmål), med mindre repoet bruker engelsk.
+- **Dokumentasjon følger endringen** (regel fra Erik, 2026-10-25). Hver endring i funksjonalitet skal vurderes mot
+  dokumentasjonen, enten den løser et issue eller ikke. Det gjelder tema, CI, skript, workflows, Projects og oppsett i orgen.
+  Vurder og oppdater i samme økt, før arbeidet meldes ferdig:
+  1. **Løsningsdokumentasjonen**: teknisk dokumentasjon i `solution-samt-bu-docs` eller `solution-task-management`.
+  2. **Brukerveiledningen**: hva brukeren ser og gjør (`solution-samt-bu-docs/content/brukerveiledning/`).
+  3. **Annet**: `CLAUDE.md`-filer, veikart, README, minne.
+
+  Nettstedet oppdateres **på norsk og engelsk** (`_index.nb.md` og `_index.en.md`).
+  Kontrollen skal **skrives ned**, ikke bare tenkes. Sluttkommentaren på issuet, eller meldingen til Erik når det ikke er et
+  issue, har linjen `Dokumentasjon: <hva som er oppdatert, med lenke>` eller `Dokumentasjon: ikke berørt, fordi <grunn>`.
+  Uten den linjen er arbeidet ikke ferdig. Ved «Avslutt sesjon»: gå gjennom sesjonens endringer og sjekk at hver har en slik linje.
