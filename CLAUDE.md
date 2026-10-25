@@ -103,7 +103,7 @@ med tilpasningene under.
    - `BUILD_REPORT_TOKEN`: Actions-secret i `samt-bu-docs`, Issues read/write på `solution-samt-bu-docs`. **Utløper 2027-10-25.**
    - `DOCS_REBUILD_TOKEN`: **org-secret** i `samt-x`, delt med de tolv modulrepoene, Contents read/write på `samt-bu-docs`.
      **Utløper 2027-10-25.**
-   - `WORKER_PAT` (klassisk, `repo`) har **ingen utløpsdato**. Skal avklares og byttes eller slettes (solution-samt-bu-docs#84).
+   - `WORKER_PAT` (klassisk, `repo`) har **ingen utløpsdato**. Den brukes av Cloudflare-workeren («Foreslå endring») og skal byttes (solution-samt-bu-docs#85).
 7. Sjekk innloggingen i Chrome-profilen «Claude», hvis utvidelsen er koblet til: åpne en fane med github.com og en med
    docs.samt-bu.no, og se om Erik er innlogget. Er han ikke det, la fanene stå på innloggingen: `github.com/login`, og på
    docs-siden «Endre» → logg inn (popupen kan havne utenfor fanegruppen). Ta GitHub først, så går docs-innloggingen
