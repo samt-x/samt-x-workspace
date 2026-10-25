@@ -98,6 +98,9 @@ med tilpasningene under.
 6. Sjekk at backup er i sync med **begge** minnemappene.
    Sjekk også utløpet for `gh`-tokenen (`gh api -i rate_limit`, headeren `github-authentication-token-expiration`).
    Varsle Erik hvis det er under 30 dager igjen. Er headeren borte, er en token uten utløp i bruk – si fra.
+   Sjekk også datoen for Actions-secreten `BUILD_REPORT_TOKEN` i `samt-bu-docs` (fine-grained PAT på `samt-x-bot`,
+   Issues read/write på `solution-samt-bu-docs`, i Bitwarden). Den **utløper 2027-10-25**, og utløpet kan ikke leses
+   fra API-et. Varsle Erik under 30 dager før. Ny token: oppdater datoen her.
 7. Sjekk innloggingen i Chrome-profilen «Claude», hvis utvidelsen er koblet til: åpne en fane med github.com og en med
    docs.samt-bu.no, og se om Erik er innlogget. Er han ikke det, la fanene stå på innloggingen: `github.com/login`, og på
    docs-siden «Endre» → logg inn (popupen kan havne utenfor fanegruppen). Ta GitHub først, så går docs-innloggingen
