@@ -134,7 +134,7 @@ Som i `session-start-prompts.md`, men:
   Windows, og Claude Code sletter samtalefilene (`.jsonl`) etter 30 dager. Bildene legges **ikke** i `claude-memory`,
   fordi de kan vise innstillinger. Ved prematur avslutning: kopier på nytt ved ekte slutt (overskriver).
 - **Utlogging i Chrome-profilen «Claude»:** Minn Erik på det, og tilby å gjøre det selv: først docs.samt-bu.no (avataren →
-  «Logg ut», sletter bare tokenen lokalt), så github.com (avataren → «Sign out» → bekreft). Vent på ja. Er utvidelsen ikke koblet
+  «Logg ut», sletter bare tokenen lokalt), så github.com (avataren → «Sign out» → bekreft). Spør med AskUserQuestion, ett ja/nei-spørsmål per sted, og logg bare ut der Erik svarer ja. Er utvidelsen ikke koblet
   til, eller er profilen ikke brukt i sesjonen, holder det med påminnelsen. Begrunnelse: en innlogget nettleser har alle
   rettighetene til kontoen, mens `gh`-tokenen er strammet inn (sesjon 92).
 - **Navn på sesjonen:** Velg selv et kort navn som sier hva som er gjort (f.eks. `s92 Tilganger og org-opprydding`),
