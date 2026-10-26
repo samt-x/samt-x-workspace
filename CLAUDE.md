@@ -137,7 +137,8 @@ Som i `session-start-prompts.md`, men:
   `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
   resultatet. **Sluttkommentaren skal ha linjen «Dokumentasjon: …»** (se Arbeidsregler). **Før lukking:** kryss av
   gjenstående-lister i tidligere kommentarer (`- [ ]` → `- [x]` med kort merknad om hvor det ble gjort, eller flyttet
-  til nytt issue). Sjekk: `gh api repos/<org>/<repo>/issues/<N>/comments --paginate --jq '[.[].body | select(contains("- [ ]"))] | length'` skal gi 0. Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
+  til nytt issue). Sjekk: `gh api repos/<org>/<repo>/issues/<N>/comments --paginate --jq '.[].body' | grep -c -F -- '- [ ]'` skal gi 0
+(ikke tekst i anførselstegn inni jq, det stopper Bash-vakten). Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
   repoet endringen gjelder (f.eks. `samt-bu-architecture#31`, `samt-bu-common-tasks#69`).
 - **Minne:** docs-spesifikt i docs-minnet, GitHub-org og arbeid på tvers i workspace-minnet.
   Sesjonshistorikken (`project_sesjonshistorikk.md` i docs-minnet) er felles og har én nummerering.
