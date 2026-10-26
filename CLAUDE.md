@@ -131,14 +131,15 @@ med tilpasningene under.
 Som i `session-start-prompts.md`, men:
 
 - **Dokumentasjon:** før git, sjekk at hver endring i funksjonalitet i sesjonen har en «Dokumentasjon:»-linje (se Arbeidsregler).
-  Mangler det, gjør vurderingen og oppdateringen nå.
+  Mangler det, gjør vurderingen og oppdateringen nå. Er noe gitt nytt navn i sesjonen, kjør søket etter det gamle navnet
+  i alle innholdsrepoene (se Arbeidsregler) også her. Avslutningen er kontrollen, ikke stedet dokumentasjonen skrives.
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
 - **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, oppgavestyringen → `solution-task-management`, generisk arkitektur →
   `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
   resultatet. **Sluttkommentaren skal ha linjen «Dokumentasjon: …»** (se Arbeidsregler). **Før lukking:** kryss av
   gjenstående-lister i tidligere kommentarer (`- [ ]` → `- [x]` med kort merknad om hvor det ble gjort, eller flyttet
   til nytt issue). Sjekk: `gh api repos/<org>/<repo>/issues/<N>/comments --paginate --jq '.[].body' | grep -c -F -- '- [ ]'` skal gi 0
-(ikke tekst i anførselstegn inni jq, det stopper Bash-vakten). Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
+  (ikke tekst i anførselstegn inni jq, det stopper Bash-vakten). Administrative endringer i repo/Projects får et `chore`-issue som spor, i det
   repoet endringen gjelder (f.eks. `samt-bu-architecture#31`, `samt-bu-common-tasks#69`).
 - **Minne:** docs-spesifikt i docs-minnet, GitHub-org og arbeid på tvers i workspace-minnet.
   Sesjonshistorikken (`project_sesjonshistorikk.md` i docs-minnet) er felles og har én nummerering.
@@ -168,6 +169,13 @@ Som i `session-start-prompts.md`, men:
   1. **Løsningsdokumentasjonen**: teknisk dokumentasjon i `solution-samt-bu-docs` eller `solution-task-management`.
   2. **Brukerveiledningen**: hva brukeren ser og gjør (`solution-samt-bu-docs/content/brukerveiledning/`).
   3. **Annet**: `CLAUDE.md`-filer, veikart, README, minne.
+
+  **Når:** fortløpende, ikke samlet til «Avslutt sesjon». «Ferdig» betyr at endringen er **i bruk** (live), ikke hvert
+  mellomsteg. Mens en utforming diskuteres med Erik, venter dokumentasjonen. Den skrives når endringen er tatt i bruk
+  (presisert av Erik 2026-10-26, s100).
+  **Navnebytte** (type, felt, side, repo, merkelapp …): søk etter det gamle navnet i `content/` i **alle** innholdsrepoene,
+  ikke bare der det er kjent at det står. Ett Grep per repo: en glob over flere repoer kan gi null treff uten å ha søkt
+  (s100: slik ble «Rapporter feil» i `solution-samt-bu-docs` funnet).
 
   Nettstedet oppdateres **på norsk og engelsk** (`_index.nb.md` og `_index.en.md`).
   Kontrollen skal **skrives ned**, ikke bare tenkes. Sluttkommentaren på issuet, eller meldingen til Erik når det ikke er et
