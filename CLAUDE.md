@@ -105,6 +105,8 @@ med tilpasningene under.
    - `DOCS_REBUILD_TOKEN`: **org-secret** i `samt-x`, delt med de tolv modulrepoene, Contents read/write på `samt-bu-docs`.
      **Utløper 2027-10-25.**
    - `WORKER_PAT` (klassisk, `repo`) har **ingen utløpsdato**. Den brukes av Cloudflare-workeren («Foreslå endring») og skal byttes (solution-samt-bu-docs#85).
+
+   Les også de nye linjene i `S:/app-data/claude/logs/permission-prompts.log` (se «Tillatelsesstopp» under).
 7. Sjekk innloggingen i Chrome-profilen «Claude», hvis utvidelsen er koblet til: åpne en fane med github.com og en med
    docs.samt-bu.no, og se om Erik er innlogget. Er han ikke det, la fanene stå på innloggingen: `github.com/login`, og på
    docs-siden «Endre» → logg inn (popupen kan havne utenfor fanegruppen). Ta GitHub først, så går docs-innloggingen
@@ -154,9 +156,23 @@ Som i `session-start-prompts.md`, men:
   «Logg ut», sletter bare tokenen lokalt), så github.com (avataren → «Sign out» → bekreft). Spør med AskUserQuestion, ett ja/nei-spørsmål per sted, og logg bare ut der Erik svarer ja. Er utvidelsen ikke koblet
   til, eller er profilen ikke brukt i sesjonen, holder det med påminnelsen. Begrunnelse: en innlogget nettleser har alle
   rettighetene til kontoen, mens `gh`-tokenen er strammet inn (sesjon 92).
+- **Tillatelsesstopp:** les sesjonens linjer i `permission-prompts.log` og foreslå nye regler til Bash-vakten (se under).
 - **Navn på sesjonen:** Velg selv et kort navn som sier hva som er gjort (f.eks. `s92 Tilganger og org-opprydding`),
   uten å spørre Erik. Bruk det i sesjonshistorikken, og vis linjen `/rename <navn>` til slutt i avslutningen, ferdig til
   å lime inn. Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
+
+### Tillatelsesstopp
+
+To hooks i `~/.claude/hooks/` (Erik installerer, mappen er sperret for Claude):
+
+- `bash-guard.js` (PreToolUse) avviser Bash-kommandoer som ville gitt et tillatelsesspørsmål. Reglene står i workspace-minnet
+  `feedback_faste-stier-i-kommandoer.md`, avvisningene i `S:/app-data/claude/logs/bash-guard.log`.
+- `log-permission.js` (PermissionRequest, fra 2026-10-27) skriver hvert spørsmål Erik faktisk får til
+  `S:/app-data/claude/logs/permission-prompts.log`: tid, sesjon, modus, verktøy og kommando. Grunnen i dialogen og Eriks svar
+  er ikke med, fordi Claude Code ikke gir hooks de opplysningene.
+
+Ny type stopp i loggen: lag ny regel i en kopi av vakten i scratchpad, legg en testlinje i `S:/app-data/claude/test-bash-guard.js`,
+kjør testen mot kopien, og la Erik kopiere den på plass med `! cp`. Stopp som er riktige (f.eks. `rm -rf`, sletting via API) skal stå.
 
 ## Arbeidsregler
 
