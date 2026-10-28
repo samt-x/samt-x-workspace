@@ -158,8 +158,8 @@ Som i `session-start-prompts.md`, men:
   rettighetene til kontoen, mens `gh`-tokenen er strammet inn (sesjon 92).
 - **Tillatelsesstopp:** les sesjonens linjer i `permission-prompts.log` og foreslå nye regler til Bash-vakten (se under).
 - **Navn på sesjonen:** Velg selv et kort navn som sier hva som er gjort (f.eks. `s92 Tilganger og org-opprydding`),
-  uten å spørre Erik. Bruk det i sesjonshistorikken, og vis linjen `/rename <navn>` til slutt i avslutningen, ferdig til
-  å lime inn. Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
+  uten å spørre Erik. Bruk det i sesjonshistorikken, og vis linjen `/rename <navn>` **først** i svaret på «Avslutt sesjon»,
+  før resten av prosedyren, ferdig til å lime inn. Da slipper Erik å vente til slutt (s102). Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
 
 ### Tillatelsesstopp
 
