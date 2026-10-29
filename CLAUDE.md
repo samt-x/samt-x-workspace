@@ -32,7 +32,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `team-architecture` | `arkitektur/overordnet-arkitektur` | Overordnet arkitektur, arkitekturstyring |
 | `team-semantics` | `arkitektur/informasjonsarkitektur` | Team Semantikk – informasjonsarkitektur (lite innhold foreløpig) |
 | `samt-bu-pilot-1` … `-6` | `pilotering/pilot-1` … `-6` | Én modul per pilot (brukerreiser, arkitektur, juss …). Pilot 5 (Id-er i utdanning, Sikt) og Pilot 6 (Foreldres tilgang til data) opprettet 2026-10-10, spor i `samt-bu-common-tasks#70`. Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (se `samt-bu-common-tasks` under). |
-| `samt-bu-pilot-7` | – (ikke montert ennå, `go.mod` er klar) | Pilot 7 «Digital dialog mellom barnehage/skole og hjemmet» (case 11), opprettet 2026-10-28. Pilotleder Christiane Fröhlich (`ChristianeFrhlich`). Brett: Project 19, seks issues = arbeidspakkene. Porteføljekort `samt-bu-portfolio#12`. Docs-siden («Om pilot 7», modul + tema) gjenstår. |
+| `samt-bu-pilot-7` | `pilotering/pilot-7` | Pilot 7 «Digital dialog mellom barnehage/skole og hjemmet» (case 11), opprettet 2026-10-28 og montert 2026-10-29. Pilotleder Christiane Fröhlich (`ChristianeFrhlich`). Brett: Project 19, seks issues = arbeidspakkene. Porteføljekort `samt-bu-portfolio#12`. «Om pilot 7» bygger på planutkastet v0.1. |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
 | `solution-samt-bu-docs` | `prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
