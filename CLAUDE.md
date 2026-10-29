@@ -160,7 +160,8 @@ Som i `session-start-prompts.md`, men:
 - **Tillatelsesstopp:** les sesjonens linjer i `permission-prompts.log` og foreslå nye regler til Bash-vakten (se under).
 - **Navn på sesjonen:** Velg selv et kort navn som sier hva som er gjort (f.eks. `s92 Tilganger og org-opprydding`),
   uten å spørre Erik. Bruk det i sesjonshistorikken, og vis linjen `/rename <navn>` **først** i svaret på «Avslutt sesjon»,
-  før resten av prosedyren, ferdig til å lime inn. Da slipper Erik å vente til slutt (s102). Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
+  før resten av prosedyren, ferdig til å lime inn. Da slipper Erik å vente til slutt (s102). **Gjenta linjen øverst i
+  sluttmeldingen**, i en egen kodeblokk. Linjen før verktøykallene drukner i utskriften, og i s105 så Erik den ikke. Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
 
 ### Tillatelsesstopp
 
