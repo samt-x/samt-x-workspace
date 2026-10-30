@@ -18,6 +18,10 @@ bygget fra `samt-bu-docs` med flere innholdsrepoer montert som Hugo-moduler.
 
 Kartlagt 2026-09-30 fra README-er, `hugo.toml` og innhold. Sjekk mot kilden ved tvil.
 
+Alle repoene har **topics** (fra 2026-10-31): `project-samt-bu`, `scope-project` eller `scope-shared` (levetid), og type
+(`content`, `tasks`, `models` …). Regelen står i Konvensjoner i `solution-task-management` (#31). Nytt repo → topics.
+Prefikset `samt-bu-` bare for prosjektspesifikke repoer. Innhold og oppgaver for arkitektur og semantikk ligger med vilje i hvert sitt repo.
+
 ### Nettstedet docs.samt-bu.no
 
 `samt-bu-docs` er hovedrepoet. Det har egen `CLAUDE.md`, som du skal lese ved arbeid der.
@@ -30,7 +34,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `samt-bu-docs` | – (eget innhold) | Nettstedet: `hugo.toml`, egne seksjoner (behov, innsikt, prosjektstyring, om …), Cloudflare-oppsett |
 | `hugo-theme-samt-bu` | – | Tema (Docdock/Altinn-basert). **Git-submodule** i `samt-bu-docs/themes/`, ikke Hugo-modul. README er fortsatt Altinns. |
 | `team-architecture` | `arkitektur/overordnet-arkitektur` | Overordnet arkitektur, arkitekturstyring |
-| `team-semantics` | `arkitektur/informasjonsarkitektur` | Team Semantikk – informasjonsarkitektur (lite innhold foreløpig) |
+| `team-semantics` | `arkitektur/informasjonsarkitektur` | Informasjonsarkitektur (domenemodell, kartlegging). Write for teamene `samt-bu-information-models` og `samt-bu-architecture` og kjerneteamet. Teamet `samt-bu-semantics` ble slått inn i `samt-bu-information-models` 2026-10-31 (`team-semantics#1`). |
 | `samt-bu-pilot-1` … `-6` | `pilotering/pilot-1` … `-6` | Én modul per pilot (brukerreiser, arkitektur, juss …). Pilot 5 (Id-er i utdanning, Sikt) og Pilot 6 (Foreldres tilgang til data) opprettet 2026-10-10, spor i `samt-bu-common-tasks#70`. Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (se `samt-bu-common-tasks` under). |
 | `samt-bu-pilot-7` | `pilotering/pilot-7` | Pilot 7 «Digital dialog mellom barnehage/skole og hjemmet» (case 11), opprettet 2026-10-28 og montert 2026-10-29. Pilotleder Christiane Fröhlich (`ChristianeFrhlich`). Brett: Project 19, seks issues = arbeidspakkene. Porteføljekort `samt-bu-portfolio#12`. «Om pilot 7» bygger på planutkastet v0.1. |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
@@ -47,7 +51,7 @@ så du bør pulle før du endrer noe.
 |---|---|
 | `samt-bu-files` | Dokumentarkiv (Word/PDF): `drafts/`, `contributions/`, `library/`, `project-files/`. Offentlig repo. Office-filer lenkes via Office Online-mønsteret i brukerens globale CLAUDE.md. |
 | `samt-bu-common-tasks` | **Felles oppgaver** på tvers av pilotene, som GitHub Issues; repoet har bare README. Het `Oppgaver` til 2026-10-10 (gamle adresser sendes videre). Overgangen til ett repo per pilot er gjennomført, med spor i #69: Pilot 1, 2 og 3 er flyttet til `samt-bu-pilot-1` (Project 1), `samt-bu-pilot-2` (Project 2) og `samt-bu-pilot-3` (Project 4), og Pilot 4 til `samt-bu-pilot-4` (Project 3). Unntak: to sidekommentarer fra docs-nettstedet (`samt-bu-docs` nr. 97 og 98) står i Project 3, men må ligge i `samt-bu-docs` for at kommentarpanelet på siden skal finne dem. Pilot 5 og 6 har Project 9 og 10. Merk: Project 3 = Pilot 4 og Project 4 = Pilot 3. |
-| `information-models` | Felles informasjonsmodeller som OWL/SHACL (`models/person/`). Filene er lite endret siden 2026-03, men oppgavene (issues) er aktive. |
+| `information-models` | Kjerstis arbeidsrepo for semantikk: 30 issues (prosjektarbeid), brett Project 6 «SAMT-BU Informasjonsmodeller», og en skisse av personmodellen som OWL/SHACL (`models/person/`, 2026-03-27). Write: teamet `samt-bu-information-models`. Navn og plassering av modellfilene venter på avtale med Kjersti (`solution-task-management#31`). |
 | `samt-bu-archi-models` | ArchiMate-modeller og målbilder, med Python-skript for generering og reparasjon. **Privat arbeidsmateriale, ikke i docs.** `samt-bu-alle` har Read (fra 2026-10-23), så prosjektdeltakerne kan lese den. Skrivetilgang via teamet `samt-bu-archimate` (Morten, Cat, Erik), som også har Write på `kode-archiscripts`. Klones **ikke** her, se merknad under. |
 | `kode-archiscripts` | jArchi-skriptbibliotek (ca. 280 `.ajs`-skript, kjerne i `common/`). Flyttet fra `nasjonal-arkitektur` 2026-08-17. |
 | `samt-bu-intern-admin` | Internt arbeidsmateriale og administrasjon for kjerneteamet (medlemsoversikt m.m.). **Privat:** bare `samt-bu-core-team` og eierne, fordi grunnrettigheten for orgen er «No permission» fra 2026-10-23 (`solution-samt-bu-docs#72`). Het `samt-bu-intern` til 2026-10-23. |
