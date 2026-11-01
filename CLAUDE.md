@@ -141,6 +141,7 @@ Som i `session-start-prompts.md`, men:
 - **Dokumentasjon:** før git, sjekk at hver endring i funksjonalitet i sesjonen har en «Dokumentasjon:»-linje (se Arbeidsregler).
   Mangler det, gjør vurderingen og oppdateringen nå. Er noe gitt nytt navn i sesjonen, kjør søket etter det gamle navnet
   i alle innholdsrepoene (se Arbeidsregler) også her. Avslutningen er kontrollen, ikke stedet dokumentasjonen skrives.
+- **Risiko:** sjekk på samme måte at hver endring har en «Risiko: …»-linje (se Arbeidsregler). Mangler den, vurder nå.
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
 - **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, oppgavestyringen → `solution-task-management`, generisk arkitektur →
   `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
@@ -204,3 +205,8 @@ kjør testen mot kopien, og la Erik kopiere den på plass med `! cp`. Stopp som 
   Kontrollen skal **skrives ned**, ikke bare tenkes. Sluttkommentaren på issuet, eller meldingen til Erik når det ikke er et
   issue, har linjen `Dokumentasjon: <hva som er oppdatert, med lenke>` eller `Dokumentasjon: ikke berørt, fordi <grunn>`.
   Uten den linjen er arbeidet ikke ferdig. Ved «Avslutt sesjon»: gå gjennom sesjonens endringer og sjekk at hver har en slik linje.
+- **Risiko vurderes ved hver endring** (regel fra Erik, 2026-11-02, `solution-task-management#43`). Samme sted og tid som
+  dokumentasjonslinjen: sluttkommentaren, eller meldingen til Erik, har også linjen `Risiko: opprettet/oppdatert <repo#N> (<hva>)`
+  eller `Risiko: ikke berørt, fordi <grunn>`. Vurder om endringen skaper, endrer eller fjerner en risiko, også i eksisterende
+  Risk-issues og når en risiko påvirker en annen (koble dem under Relationships). Nytt Risk-issue bare ved en reell konsekvens,
+  ellers holder «ikke berørt, fordi …». Søk etter eksisterende først. Gjelder Claude; for prosjektdeltakerne avgjøres det i #43.
