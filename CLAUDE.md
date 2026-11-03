@@ -103,6 +103,9 @@ med tilpasningene under.
 3. Les veikartet (`solution-samt-bu-docs/content/veikart/`, alle `_index.nb.md`).
 4. Kjør `bash S:/app-data/github/samt-x-repos/status-all.sh --fetch`. Det viser status for **alle** repoene,
    også temaet som submodule.
+   Kjør så, uten å spørre, `bash S:/app-data/github/samt-x-repos/pull-all.sh` og
+   `bash S:/app-data/github/samt-x-repos/check-translations.sh` (ca. 4 sek). Pull først, ellers ser sjekken ikke endringer andre har
+   gjort siden forrige sesjon. Resultatet vises i statusen og brukes i punkt 10.
 5. List åpne issues i `solution-samt-bu-docs` (teknisk backlog for docs) og åpne
    oppgaver i Project 5 (`samt-bu-architecture`).
 6. Sjekk at backup er i sync med **begge** minnemappene.
@@ -122,9 +125,10 @@ med tilpasningene under.
    uten passord. Erik skriver passordet selv, aldri Claude. Er utvidelsen ikke koblet til, nevn det kort og gå videre.
 8. Bekreft hvilke filer som er lest, og gi en kort status.
 9. Avslutt med **Claude-hint** (under), kort og uendret, som påminnelse til Erik.
-10. **Oversettelse:** les [solution-samt-bu-docs#91](https://github.com/samt-x/solution-samt-bu-docs/issues/91) (tallet står i tittelen).
-    Står det sider der, spør Erik med AskUserQuestion: «Oversette N sider nå?», med «Ja (Recommended)» først og «Nei» som
-    andre valg. Ja → følg «Oversettelse» under. Nei → nevn det kort, og gå videre.
+10. **Oversettelse:** vis resultatet av sjekken fra punkt 4, også når det er 0 («Oversettelse: 0 sider»). Er det treff, vis
+    sidene (repo, side, grunn) og spør Erik med AskUserQuestion: «Oversette N sider nå?», med «Ja (Recommended)» først og
+    «Nei» som andre valg. Ja → følg «Oversettelse» under. Nei → nevn at de står på
+    [solution-samt-bu-docs#91](https://github.com/samt-x/solution-samt-bu-docs/issues/91), og gå videre.
 
 ### Claude-hint (vises ved «Start sesjon»)
 
@@ -148,9 +152,10 @@ Som i `session-start-prompts.md`, men:
   Mangler det, gjør vurderingen og oppdateringen nå. Er noe gitt nytt navn i sesjonen, kjør søket etter det gamle navnet
   i alle innholdsrepoene (se Arbeidsregler) også her. Avslutningen er kontrollen, ikke stedet dokumentasjonen skrives.
 - **Risiko:** sjekk på samme måte at hver endring har en «Risiko: …»-linje (se Arbeidsregler). Mangler den, vurder nå.
-- **Oversettelse:** før git, kjør `bash S:/app-data/github/samt-x-repos/check-translations.sh` (lokalt, så sesjonens egne
-  endringer er med selv om [solution-samt-bu-docs#91](https://github.com/samt-x/solution-samt-bu-docs/issues/91) ikke er
-  oppdatert ennå). Kjør `pull-all.sh` først hvis repoene ikke er pullet i sesjonen. Er det treff, spør Erik med AskUserQuestion: «Oversette N sider før vi avslutter?»,
+- **Oversettelse:** før git, kjør uten å spørre `bash S:/app-data/github/samt-x-repos/pull-all.sh` og
+  `bash S:/app-data/github/samt-x-repos/check-translations.sh` (lokalt, så sesjonens egne endringer er med selv om
+  [solution-samt-bu-docs#91](https://github.com/samt-x/solution-samt-bu-docs/issues/91) ikke er oppdatert ennå). Vis resultatet,
+  også når det er 0. Er det treff, vis sidene og spør Erik med AskUserQuestion: «Oversette N sider før vi avslutter?»,
   med «Ja (Recommended)» først og «Nei» som andre valg. Ja → følg «Oversettelse» under. Nei → nevn at de står på #91.
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
 - **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, oppgavestyringen → `solution-task-management`, generisk arkitektur →
@@ -174,10 +179,14 @@ Som i `session-start-prompts.md`, men:
   til, eller er profilen ikke brukt i sesjonen, holder det med påminnelsen. Begrunnelse: en innlogget nettleser har alle
   rettighetene til kontoen, mens `gh`-tokenen er strammet inn (sesjon 92).
 - **Tillatelsesstopp:** les sesjonens linjer i `permission-prompts.log` og foreslå nye regler til Bash-vakten (se under).
-- **Navn på sesjonen:** Velg selv et kort navn som sier hva som er gjort (f.eks. `s92 Tilganger og org-opprydding`),
-  uten å spørre Erik. Bruk det i sesjonshistorikken, og vis linjen `/rename <navn>` **først** i svaret på «Avslutt sesjon»,
-  før resten av prosedyren, ferdig til å lime inn. Da slipper Erik å vente til slutt (s102). **Gjenta linjen øverst i
-  sluttmeldingen**, i en egen kodeblokk. Linjen før verktøykallene drukner i utskriften, og i s105 så Erik den ikke. Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
+- **Navn på sesjonen** (fra s110): Velg selv et kort navn som sier hva som er gjort (f.eks. `s92 Tilganger og org-opprydding`),
+  uten å spørre Erik, **først** i prosedyren. Skriv det med Write til `S:/app-data/claude/session-titles/<sesjons-id>.txt`
+  (sesjons-id-en er mappenavnet i scratchpad-stien). Hooken `session-title.js` setter da navnet, med samme virkning som `/rename`,
+  ved Eriks neste melding eller når sesjonen gjenopptas. Claude kan ikke kjøre `/rename` selv. Bruk navnet i sesjonshistorikken.
+  **Helt til slutt**, etter alt annet: spør med AskUserQuestion «Sesjonen heter «<navn>». Vil du endre navnet?», med
+  «Behold (Recommended)» først og «Endre» som andre valg (Erik skriver det nye navnet i «Other»). Nytt navn → skriv det i fila og
+  rett sesjonshistorikken. Har Erik allerede gitt sesjonen et navn med `/rename`, bruk det. Finnes ikke
+  `C:/Users/Win11_local/.claude/hooks/session-title.js`, vis linjen `/rename <navn>` i en kodeblokk øverst i sluttmeldingen, som før.
 
 ### Oversettelse
 
@@ -197,13 +206,15 @@ Fra 2026-11-03 (s110): Claude Code oversetter sidene som står på
 
 ### Tillatelsesstopp
 
-To hooks i `~/.claude/hooks/` (Erik installerer, mappen er sperret for Claude):
+Hooks i `~/.claude/hooks/` (Erik installerer, mappen er sperret for Claude):
 
 - `bash-guard.js` (PreToolUse) avviser Bash-kommandoer som ville gitt et tillatelsesspørsmål. Reglene står i workspace-minnet
   `feedback_faste-stier-i-kommandoer.md`, avvisningene i `S:/app-data/claude/logs/bash-guard.log`.
 - `log-permission.js` (PermissionRequest, fra 2026-10-27) skriver hvert spørsmål Erik faktisk får til
   `S:/app-data/claude/logs/permission-prompts.log`: tid, sesjon, modus, verktøy og kommando. Grunnen i dialogen og Eriks svar
   er ikke med, fordi Claude Code ikke gir hooks de opplysningene.
+- `session-title.js` (UserPromptSubmit og SessionStart, fra s110) gir sesjonen navnet Claude har skrevet i
+  `S:/app-data/claude/session-titles/<sesjons-id>.txt` (se «Navn på sesjonen» under «Avslutt sesjon»). Uten fil gjør den ingenting.
 
 Ny type stopp i loggen: lag ny regel i en kopi av vakten i scratchpad, legg en testlinje i `S:/app-data/claude/test-bash-guard.js`,
 kjør testen mot kopien, og la Erik kopiere den på plass med `! cp`. Stopp som er riktige (f.eks. `rm -rf`, sletting via API) skal stå.
