@@ -73,9 +73,9 @@ Ikke klon repoet inn i dette workspacet. En kopi ble laget og slettet igjen 2026
   undermapper. Foretrekk `sync-all.sh` for toveis synk; den løser aldri konflikter selv.
 - `status-all.sh` (+ `.bat`) – én statuslinje per repo, endrede filer under, endrer ingenting. `--fetch` henter først.
   Laget 2026-10-24 for at Claude skal slippe løkker over stier, som gir stopp for tillatelse.
-- `check-translations.sh` – engelske sider som mangler, har plassholderen «English translation TBD», eller ligger bak
-  den norske (norsk endret av et menneske etter siste menneskelige commit på engelsk). `--diff` viser de norske endringene,
-  `--repo <navn>` avgrenser. Endrer ingenting. Laget 2026-11-02 (s110).
+- `check-translations.sh` – sider der norsk og engelsk ikke er i takt, i begge retninger (se «Oversettelse» under).
+  Innpakning: selve skriptet ligger i `samt-bu-docs/.github/scripts/`, så workflowen `translations.yml` kan kjøre det.
+  `--diff` viser endringene som må oversettes, `--repo <navn>` avgrenser. Endrer ingenting. Laget 2026-11-02 (s110).
 - `reweight_content.py` – renummererer `weight:` i `_index.*.md` i innholdsmodulene.
   Stiene er hardkodet til `S:/app-data/github/samt-x-repos/...`.
 
@@ -122,6 +122,9 @@ med tilpasningene under.
    uten passord. Erik skriver passordet selv, aldri Claude. Er utvidelsen ikke koblet til, nevn det kort og gå videre.
 8. Bekreft hvilke filer som er lest, og gi en kort status.
 9. Avslutt med **Claude-hint** (under), kort og uendret, som påminnelse til Erik.
+10. **Oversettelse:** les [solution-samt-bu-docs#91](https://github.com/samt-x/solution-samt-bu-docs/issues/91) (tallet står i tittelen).
+    Står det sider der, spør Erik med AskUserQuestion: «Oversette N sider nå?», med «Ja (Recommended)» først og «Nei» som
+    andre valg. Ja → følg «Oversettelse» under. Nei → nevn det kort, og gå videre.
 
 ### Claude-hint (vises ved «Start sesjon»)
 
@@ -171,6 +174,22 @@ Som i `session-start-prompts.md`, men:
   uten å spørre Erik. Bruk det i sesjonshistorikken, og vis linjen `/rename <navn>` **først** i svaret på «Avslutt sesjon»,
   før resten av prosedyren, ferdig til å lime inn. Da slipper Erik å vente til slutt (s102). **Gjenta linjen øverst i
   sluttmeldingen**, i en egen kodeblokk. Linjen før verktøykallene drukner i utskriften, og i s105 så Erik den ikke. Claude kan ikke kjøre slash-kommandoer selv. Har Erik allerede gitt sesjonen et navn, bruk det.
+
+### Oversettelse
+
+Fra 2026-11-03 (s110): Claude Code oversetter sidene som står på
+[solution-samt-bu-docs#91](https://github.com/samt-x/solution-samt-bu-docs/issues/91). Lista holdes oppdatert av workflowen
+`translations.yml` i `samt-bu-docs`. Reglene står på docs-siden
+[Oversettelse](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/teknisk-dokumentasjon/oversettelse/)
+(`solution-samt-bu-docs/content/teknisk-dokumentasjon/oversettelse/`). Følg dem. Kort:
+
+1. Pull de berørte repoene. Kjør `check-translations.sh --diff` for å se hva som er endret.
+2. Oversett fra den fila som er endret sist, i begge retninger. `id` uendret, `weight`/`aliases` som originalen, `status` på målspråket,
+   `/en/` på interne lenker, `ui=en-US`/`nb-NO` på Office-lenker. Store sider kan gå til subagenter (som i s110).
+3. Commit med linjen `Oversatt-fra: nb` (eller `en`) i meldingen. Ellers ser originalen utdatert ut ved neste sjekk.
+4. Push, og kjør `check-translations.sh` på nytt. Er et treff falskt, legg det i `samt-bu-docs/.github/translation-ignore.txt`
+   med grunnen.
+5. Feil i originalen (avkuttet tekst, feil lenke) rettes ikke i stillhet. Meld dem til Erik.
 
 ### Tillatelsesstopp
 
