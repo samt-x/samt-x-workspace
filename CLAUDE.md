@@ -119,6 +119,10 @@ med tilpasningene under.
    Kjør også `bash S:/app-data/github/samt-x-repos/outside-contributors.sh` og vis kontoene **til vurdering** (login, første bidrag).
    Er det nye, foreslå å føre dem inn i `samt-bu-intern-admin/medlemmer.md` som «potensiell», og minn om å krysse av i
    [solution-task-management#50](https://github.com/samt-x/solution-task-management/issues/50) når de er vurdert (#49).
+   **Påminnelse om medlemslista** (Erik, s113): vis login og merknad for dem i
+   [medlemmer.md](https://github.com/samt-x/samt-bu-intern-admin/blob/main/medlemmer.md) (privat, kjerneteamet) med status
+   «potensiell», «?» eller «inaktiv», og be Erik vurdere dem (invitere, avklare, fjerne). Les fila lokalt med Grep, ikke `cat`.
+   Bare login, status og merknad i chatten, ikke e-post eller telefon.
 6. Sjekk at backup er i sync med **begge** minnemappene.
    Sjekk også utløpet for `gh`-tokenen (`gh api -i rate_limit`, headeren `github-authentication-token-expiration`).
    Varsle Erik hvis det er under 30 dager igjen. Er headeren borte, er en token uten utløp i bruk – si fra.
