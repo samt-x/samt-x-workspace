@@ -73,6 +73,9 @@ Ikke klon repoet inn i dette workspacet. En kopi ble laget og slettet igjen 2026
   undermapper. Foretrekk `sync-all.sh` for toveis synk; den løser aldri konflikter selv.
 - `status-all.sh` (+ `.bat`) – én statuslinje per repo, endrede filer under, endrer ingenting. `--fetch` henter først.
   Laget 2026-10-24 for at Claude skal slippe løkker over stier, som gir stopp for tillatelse.
+- `check-translations.sh` – engelske sider som mangler, har plassholderen «English translation TBD», eller ligger bak
+  den norske (norsk endret av et menneske etter siste menneskelige commit på engelsk). `--diff` viser de norske endringene,
+  `--repo <navn>` avgrenser. Endrer ingenting. Laget 2026-11-02 (s110).
 - `reweight_content.py` – renummererer `weight:` i `_index.*.md` i innholdsmodulene.
   Stiene er hardkodet til `S:/app-data/github/samt-x-repos/...`.
 
