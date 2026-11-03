@@ -73,6 +73,8 @@ Ikke klon repoet inn i dette workspacet. En kopi ble laget og slettet igjen 2026
   undermapper. Foretrekk `sync-all.sh` for toveis synk; den løser aldri konflikter selv.
 - `status-all.sh` (+ `.bat`) – én statuslinje per repo, endrede filer under, endrer ingenting. `--fetch` henter først.
   Laget 2026-10-24 for at Claude skal slippe løkker over stier, som gir stopp for tillatelse.
+- `prs-all.sh` – åpne pull requests i **alle** repoene i orgen (GraphQL, også repoer som ikke er klonet): forfatter, dato,
+  hvem som er bedt om review. Endrer ingenting. Laget 2026-11-03 (s111).
 - `check-translations.sh` – sider der norsk og engelsk ikke er i takt, i begge retninger (se «Oversettelse» under).
   Innpakning: selve skriptet ligger i `samt-bu-docs/.github/scripts/`, så workflowen `translations.yml` kan kjøre det.
   `--diff` viser endringene som må oversettes, `--repo <navn>` avgrenser. Endrer ingenting. Laget 2026-11-02 (s110).
@@ -108,6 +110,9 @@ med tilpasningene under.
    gjort siden forrige sesjon. Resultatet vises i statusen og brukes i punkt 10.
 5. List åpne issues i `solution-samt-bu-docs` (teknisk backlog for docs) og åpne
    oppgaver i Project 5 (`samt-bu-architecture`).
+   Kjør `bash S:/app-data/github/samt-x-repos/prs-all.sh` og vis **alle åpne pull requests** i orgen som tabell: repo#N med lenke,
+   tittel, forfatter, alder og **hvem som kan behandle**. Orgen har ingen CODEOWNERS ennå, så sett behandler ut fra tabellen
+   over repoer og team (Write-team, ansvarlig person) og skriv «(antatt)». Hverdagstokenen får 403 på repoets teamliste.
 6. Sjekk at backup er i sync med **begge** minnemappene.
    Sjekk også utløpet for `gh`-tokenen (`gh api -i rate_limit`, headeren `github-authentication-token-expiration`).
    Varsle Erik hvis det er under 30 dager igjen. Er headeren borte, er en token uten utløp i bruk – si fra.
