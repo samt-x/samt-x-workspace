@@ -198,11 +198,13 @@ Som i `session-start-prompts.md`, men:
   uten å spørre Erik, **først** i prosedyren. Skriv det med Write til `S:/app-data/claude/session-titles/<sesjons-id>.txt`
   (sesjons-id-en er mappenavnet i scratchpad-stien). Hooken `session-title.js` setter da navnet, med samme virkning som `/rename`,
   ved Eriks neste melding eller når sesjonen gjenopptas. Claude kan ikke kjøre `/rename` selv. Bruk navnet i sesjonshistorikken.
-  **Helt til slutt**, etter alt annet: spør med AskUserQuestion «Sesjonen heter «<navn>». Vil du endre navnet?», med
-  «Behold (Recommended)» først og «Endre» som andre valg (Erik skriver det nye navnet i «Other»). Nytt navn → skriv det i fila og
-  rett sesjonshistorikken. Har Erik allerede gitt sesjonen et navn med `/rename`, bruk det.
-  **Siste linje i sluttmeldingen:** «Sesjonsnavnet settes først når du sender én melding til (f.eks. «takk»). Svar på spørsmål teller ikke.» (omformulert s113, den gamle var for kryptisk) Svar på AskUserQuestion teller
-  ikke som melding, så uten den virker hooken først når samtalen gjenopptas (s111 fikk ikke navnet av den grunn). Finnes ikke
+  **Helt til slutt**, etter alt annet (omlagt etter Eriks ønske, s113): skriv rett ut «Sesjonen har fått navnet «<navn>».», og spør
+  med AskUserQuestion «Vil du beholde navnet?» med tre valg: «Behold (Recommended)», «Endre» (Erik skriver det nye navnet i «Other»)
+  og «Diskuter» (Claude foreslår to–tre alternativer, eller Erik sier hva som skurrer). Nytt navn → skriv det i fila og rett
+  sesjonshistorikken. Har Erik allerede gitt sesjonen et navn med `/rename`, bruk det.
+  **Etter svaret, som siste setning:** «Navnet vises i `/resume` når du sender neste melding, eller neste gang sesjonen åpnes.»
+  Grunnen: svar på AskUserQuestion er ikke en melding, så hooken kjører ikke av dem (s111 fikk ikke navnet av den grunn). Testes:
+  hooken også på PostToolUse for AskUserQuestion, så ekstra melding ikke trengs (neste-sesjon-lista, s113). Finnes ikke
   `C:/Users/Win11_local/.claude/hooks/session-title.js`, vis linjen `/rename <navn>` i en kodeblokk øverst i sluttmeldingen, som før.
 
 ### Oversettelse
