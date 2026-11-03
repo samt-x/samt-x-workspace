@@ -75,6 +75,9 @@ Ikke klon repoet inn i dette workspacet. En kopi ble laget og slettet igjen 2026
   Laget 2026-10-24 for at Claude skal slippe løkker over stier, som gir stopp for tillatelse.
 - `prs-all.sh` – åpne pull requests i **alle** repoene i orgen (GraphQL, også repoer som ikke er klonet): forfatter, dato,
   hvem som er bedt om review. Endrer ingenting. Laget 2026-11-03 (s111).
+- `outside-contributors.sh` – kontoer **utenfor orgen** som har bidratt i et offentlig repo (PR, issue, kommentar, review), minus de
+  som er krysset av som vurdert i `solution-task-management#50`. Innpakning: skriptet ligger i `solution-task-management/.github/scripts/`,
+  og Sync All tasks holder #50 oppdatert hver time. Endrer ingenting lokalt. Laget 2026-11-03 (s113, #49).
 - `check-translations.sh` – sider der norsk og engelsk ikke er i takt, i begge retninger (se «Oversettelse» under).
   Innpakning: selve skriptet ligger i `samt-bu-docs/.github/scripts/`, så workflowen `translations.yml` kan kjøre det.
   `--diff` viser endringene som må oversettes, `--repo <navn>` avgrenser. Endrer ingenting. Laget 2026-11-02 (s110).
@@ -113,6 +116,9 @@ med tilpasningene under.
    Kjør `bash S:/app-data/github/samt-x-repos/prs-all.sh` og vis **alle åpne pull requests** i orgen som tabell: repo#N med lenke,
    tittel, forfatter, alder og **hvem som kan behandle**. Orgen har ingen CODEOWNERS ennå, så sett behandler ut fra tabellen
    over repoer og team (Write-team, ansvarlig person) og skriv «(antatt)». Hverdagstokenen får 403 på repoets teamliste.
+   Kjør også `bash S:/app-data/github/samt-x-repos/outside-contributors.sh` og vis kontoene **til vurdering** (login, første bidrag).
+   Er det nye, foreslå å føre dem inn i `samt-bu-intern-admin/medlemmer.md` som «potensiell», og minn om å krysse av i
+   [solution-task-management#50](https://github.com/samt-x/solution-task-management/issues/50) når de er vurdert (#49).
 6. Sjekk at backup er i sync med **begge** minnemappene.
    Sjekk også utløpet for `gh`-tokenen (`gh api -i rate_limit`, headeren `github-authentication-token-expiration`).
    Varsle Erik hvis det er under 30 dager igjen. Er headeren borte, er en token uten utløp i bruk – si fra.
