@@ -148,6 +148,10 @@ Som i `session-start-prompts.md`, men:
   Mangler det, gjør vurderingen og oppdateringen nå. Er noe gitt nytt navn i sesjonen, kjør søket etter det gamle navnet
   i alle innholdsrepoene (se Arbeidsregler) også her. Avslutningen er kontrollen, ikke stedet dokumentasjonen skrives.
 - **Risiko:** sjekk på samme måte at hver endring har en «Risiko: …»-linje (se Arbeidsregler). Mangler den, vurder nå.
+- **Oversettelse:** før git, kjør `bash S:/app-data/github/samt-x-repos/check-translations.sh` (lokalt, så sesjonens egne
+  endringer er med selv om [solution-samt-bu-docs#91](https://github.com/samt-x/solution-samt-bu-docs/issues/91) ikke er
+  oppdatert ennå). Kjør `pull-all.sh` først hvis repoene ikke er pullet i sesjonen. Er det treff, spør Erik med AskUserQuestion: «Oversette N sider før vi avslutter?»,
+  med «Ja (Recommended)» først og «Nei» som andre valg. Ja → følg «Oversettelse» under. Nei → nevn at de står på #91.
 - **Git:** commit og push i hvert berørte repo, også workspace-repoet.
 - **Issues i riktig repo:** docs-plattformen → `solution-samt-bu-docs`, oppgavestyringen → `solution-task-management`, generisk arkitektur →
   `samt-bu-architecture`, piloter → pilotens eget repo (`samt-bu-pilot-N`), felles pilotoppgaver → `samt-bu-common-tasks`. Lukk alltid med en sluttkommentar om
