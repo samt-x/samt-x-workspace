@@ -201,7 +201,7 @@ Som i `session-start-prompts.md`, men:
   **Helt til slutt**, etter alt annet: spør med AskUserQuestion «Sesjonen heter «<navn>». Vil du endre navnet?», med
   «Behold (Recommended)» først og «Endre» som andre valg (Erik skriver det nye navnet i «Other»). Nytt navn → skriv det i fila og
   rett sesjonshistorikken. Har Erik allerede gitt sesjonen et navn med `/rename`, bruk det.
-  **Siste linje i sluttmeldingen:** «Skriv en melding til (f.eks. «takk»), så settes navnet.» Svar på AskUserQuestion teller
+  **Siste linje i sluttmeldingen:** «Sesjonsnavnet settes først når du sender én melding til (f.eks. «takk»). Svar på spørsmål teller ikke.» (omformulert s113, den gamle var for kryptisk) Svar på AskUserQuestion teller
   ikke som melding, så uten den virker hooken først når samtalen gjenopptas (s111 fikk ikke navnet av den grunn). Finnes ikke
   `C:/Users/Win11_local/.claude/hooks/session-title.js`, vis linjen `/rename <navn>` i en kodeblokk øverst i sluttmeldingen, som før.
 
