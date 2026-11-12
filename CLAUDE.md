@@ -20,7 +20,9 @@ Kartlagt 2026-09-30 fra README-er, `hugo.toml` og innhold. Sjekk mot kilden ved 
 
 Alle repoene har **topics** (fra 2026-10-31): `project-samt-bu`, `scope-project` eller `scope-shared` (levetid), og type
 (`content`, `tasks`, `models` …). Regelen står i Konvensjoner i `solution-task-management` (#31). Nytt repo → topics.
-Prefikset `samt-bu-` bare for prosjektspesifikke repoer. Innhold og oppgaver for arkitektur og semantikk ligger med vilje i hvert sitt repo.
+Prefikset `samt-bu-` bare for prosjektspesifikke repoer. Repoer som skal leve videre (`scope-shared`) får typen som prefiks:
+`solution-`, `content-` (fra 2026-11-12, `solution-task-management#51`). `team-architecture` og `team-semantics` er eldre navn og står urørt.
+Innhold og oppgaver for arkitektur, semantikk og juss ligger med vilje i hvert sitt repo.
 
 ### Nettstedet docs.samt-bu.no
 
@@ -37,6 +39,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `team-semantics` | `arkitektur/informasjonsarkitektur` | Informasjonsarkitektur (domenemodell, kartlegging). Write for teamene `samt-bu-information-models` og `samt-bu-architecture` og kjerneteamet. Teamet `samt-bu-semantics` ble slått inn i `samt-bu-information-models` 2026-10-31 (`team-semantics#1`). |
 | `samt-bu-pilot-1` … `-6` | `pilotering/pilot-1` … `-6` | Én modul per pilot (brukerreiser, arkitektur, juss …). Pilot 5 (Id-er i utdanning, Sikt) og Pilot 6 (Foreldres tilgang til data) opprettet 2026-10-10, spor i `samt-bu-common-tasks#70`. Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (se `samt-bu-common-tasks` under). |
 | `samt-bu-pilot-7` | `pilotering/pilot-7` | Pilot 7 «Digital dialog mellom barnehage/skole og hjemmet» (case 11), opprettet 2026-10-28 og montert 2026-10-29. Pilotleder Christiane Fröhlich (`ChristianeFrhlich`). Brett: Project 19, seks issues = arbeidspakkene. Porteføljekort `samt-bu-portfolio#12`. «Om pilot 7» bygger på planutkastet v0.1. |
+| `content-legal` | `prosjektleveranser/rammeverk/juss` | Juss, varig innhold (`scope-shared`). Opprettet 2026-11-12 (`solution-task-management#51`); den lokale siden Juss i `samt-bu-docs` er flyttet hit med samme id. Første repo med prefikset `content-`. Oppgavene ligger i `samt-bu-legal`. Siden «Oppgaver og framdrift» viser tidslinjen for Project 21. |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
 | `solution-samt-bu-docs` | `prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
@@ -57,6 +60,7 @@ så du bør pulle før du endrer noe.
 | `samt-bu-intern-admin` | Internt arbeidsmateriale og administrasjon for kjerneteamet (medlemsoversikt m.m.). **Privat:** bare `samt-bu-core-team` og eierne, fordi grunnrettigheten for orgen er «No permission» fra 2026-10-23 (`solution-samt-bu-docs#72`). Het `samt-bu-intern` til 2026-10-23. |
 | `samt-x.github.io` | Enkel landingsside for orgen. Lenker til den gamle adressen `samt-bu.github.io/samt-bu-docs/`, ikke `docs.samt-bu.no`, så den er trolig utdatert. |
 | `samt-bu-architecture` | Oppgaverepo for generisk arkitektur og sluttleveransen (rammeverk for datasentrisk tjenesteutvikling), holdt adskilt fra pilotenes oppgaver. Bare **GitHub Issues**, ingen commits, så `pull-all` gir feilmelding her til første commit. Oversikt i Project 5 «SAMT-BU rammeverk og generisk arkitektur». Issues starter på #13: Kjerstis første oppsett (`#1`–`#12` og Project 8 «Arkitektur») ble slettet 2026-10-05 etter avtale, med spor i #31. Issue-konvensjon foreslått i #32. |
+| `samt-bu-legal` | Oppgaverepo for juss på tvers av pilotene (2026-11-12, `solution-task-management#51`), brett Project 21 «SAMT-BU Legal». Team `samt-bu-legal` (Erik, Benedicte `benedicteos` som team maintainer, så hun kan legge til medlemmer), Maintain på `samt-bu-legal` og `content-legal`. Pilotenes egne juridiske oppgaver ligger i pilotrepoene. |
 | `solution-task-management-examples` | **Eksempler, ikke oppgaver** (2026-11-01, `solution-task-management#40`): issuene A–G på Project 20 «[EXAMPLE] Timeline», brukt på docs-siden Tidslinje. Datoene flyttes hver uke av `example-dates.py` (i Timeline-workflowen) etter `example-dates.json` i `solution-task-management`. Står i EXCLUDE i synken til Project 12. Regelen står i Konvensjoner, «Eksempler i dokumentasjonen». Ikke Hugo-modul. |
 | `samt-bu-portfolio` | Porteføljekort: ett issue per pilot, produkt og arbeidsområde, på Project 13 «SAMT-BU Overview – Portfolio» (Status = fase, Category, Owner, Health, Target date). Opprettet 2026-10-19 (B1, `solution-task-management#10`). Holdes utenfor samlebrettet Project 12 «SAMT-BU Overview – All tasks», som fylles hver time av Action i `solution-task-management`. |
 | `.github` | Felles standardfiler for orgen: **issue-skjemaer**, ett per issue type (Task, Solution proposal, Question, Decision, Risk, Problem – het Bug til 2026-10-26), engelsk typenavn og norsk tekst. Gjelder alle repoer uten egne skjemaer (ingen har det). Opprettet 2026-10-26 (`solution-task-management#17`). **Klonet til `samt-x-dotgithub/`**, fordi løkkene i skriptene (`*/`) hopper over mapper med punktum. Må være offentlig. |
