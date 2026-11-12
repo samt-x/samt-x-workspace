@@ -133,7 +133,7 @@ med tilpasningene under.
    Sjekk også datoen for tokenene på `samt-x-bot` (fine-grained, i Bitwarden). Utløpet kan ikke leses fra API-et, så
    varsle Erik under 30 dager før datoen her. Ny token: oppdater datoen her.
    - `BUILD_REPORT_TOKEN`: Actions-secret i `samt-bu-docs`, Issues read/write på `solution-samt-bu-docs`. **Utløper 2027-10-25.**
-   - `DOCS_REBUILD_TOKEN`: **org-secret** i `samt-x`, delt med de tolv modulrepoene, Contents read/write på `samt-bu-docs`.
+   - `DOCS_REBUILD_TOKEN`: **org-secret** i `samt-x`, delt med de 14 modulrepoene (content-legal fra 2026-11-13), Contents read/write på `samt-bu-docs`.
      **Utløper 2027-10-25.**
    - `WORKER_PAT` (klassisk, `repo`) har **ingen utløpsdato**. Den brukes av Cloudflare-workeren («Foreslå endring») og skal byttes (solution-samt-bu-docs#85).
 
