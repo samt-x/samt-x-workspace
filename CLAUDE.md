@@ -27,6 +27,8 @@ Innhold og oppgaver for arkitektur, semantikk og juss ligger med vilje i hvert s
 ### Nettstedet docs.samt-bu.no
 
 `samt-bu-docs` er hovedrepoet. Det har egen `CLAUDE.md`, som du skal lese ved arbeid der.
+Fra 2026-11-15 (solution-samt-bu-docs#82) er det **plattform og redaksjonell ramme**; innhold med egen ansvarlig flyttes til
+moduler. Temaet finner repoet for en side selv (`page-repo.html`), så en ny modul krever ingen temaendring.
 Innholdsrepoene under er **Hugo-moduler** (`go.mod` + `content/`): `samt-bu-docs` henter
 dem via `[[module.imports]]` i `hugo.toml` og monterer `content/` på stien som står i tabellen.
 Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
@@ -40,6 +42,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `samt-bu-pilot-1` … `-6` | `pilotering/pilot-1` … `-6` | Én modul per pilot (brukerreiser, arkitektur, juss …). Pilot 5 (Id-er i utdanning, Sikt) og Pilot 6 (Foreldres tilgang til data) opprettet 2026-10-10, spor i `samt-bu-common-tasks#70`. Har også pilotens **oppgaver som issues**, ett repo til ett pilotprosjekt (se `samt-bu-common-tasks` under). |
 | `samt-bu-pilot-7` | `pilotering/pilot-7` | Pilot 7 «Digital dialog mellom barnehage/skole og hjemmet» (case 11), opprettet 2026-10-28 og montert 2026-10-29. Pilotleder Christiane Fröhlich (`ChristianeFrhlich`). Brett: Project 19, seks issues = arbeidspakkene. Porteføljekort `samt-bu-portfolio#12`. «Om pilot 7» bygger på planutkastet v0.1. |
 | `content-legal` | `arkitektur/juss` | Juss, varig innhold (`scope-shared`), delprosjekt på linje med overordnet arkitektur og informasjonsarkitektur. Lå under `prosjektleveranser/rammeverk/juss` den første dagen (alias). Opprettet 2026-11-12 (`solution-task-management#51`); den lokale siden Juss i `samt-bu-docs` er flyttet hit med samme id. Første repo med prefikset `content-`. Oppgavene ligger i `samt-bu-legal`. Siden «Oppgaver og framdrift» viser tidslinjen for Project 21. |
+| `samt-bu-governance` | `styring` | Styring: arbeidsmodell, beslutningslogg, deltakere og tilgang, oppgaver og oppfølging, samlinger. Flyttet fra lokal `content/prosjektstyring/` i `samt-bu-docs` 2026-11-15 med historikk (`git filter-branch`), ny adresse `/styring/`, gamle adresser i `_redirects` (solution-samt-bu-docs#82). Eier: kjerneteamet. Ingen issues eller brett. |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
 | `solution-samt-bu-docs` | `prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
