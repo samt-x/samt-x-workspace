@@ -124,8 +124,9 @@ med tilpasningene under.
 5. List åpne issues i `solution-samt-bu-docs` (teknisk backlog for docs) og åpne
    oppgaver i Project 5 (`samt-bu-architecture`).
    Kjør `bash S:/app-data/github/samt-x-repos/prs-all.sh` og vis **alle åpne pull requests** i orgen som tabell: repo#N med lenke,
-   tittel, forfatter, alder og **hvem som kan behandle**. Orgen har ingen CODEOWNERS ennå, så sett behandler ut fra tabellen
-   over repoer og team (Write-team, ansvarlig person) og skriv «(antatt)». Hverdagstokenen får 403 på repoets teamliste.
+   tittel, forfatter, alder og **hvem som kan behandle**: eieren fra CODEOWNERS, som skriptet viser (alle repoene har den fra
+   2026-11-15, tabellen «Hvem behandler pull requests» i Konvensjoner, solution-task-management#46). PR-er åpnet før 15.11 har ingen
+   review-forespørsel fra CODEOWNERS. Nytt repo → ny rad i tabellen, så `py -I solution-task-management/.github/scripts/codeowners.py --apply`.
    Kjør også `bash S:/app-data/github/samt-x-repos/outside-contributors.sh` og vis kontoene **til vurdering** (login, første bidrag).
    Er det nye, foreslå å føre dem inn i `samt-bu-intern-admin/medlemmer.md` som «potensiell», og minn om å krysse av i
    [solution-task-management#50](https://github.com/samt-x/solution-task-management/issues/50) når de er vurdert (#49).
