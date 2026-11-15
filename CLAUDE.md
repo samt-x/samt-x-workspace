@@ -28,7 +28,8 @@ Innhold og oppgaver for arkitektur, semantikk og juss ligger med vilje i hvert s
 
 `samt-bu-docs` er hovedrepoet. Det har egen `CLAUDE.md`, som du skal lese ved arbeid der.
 Fra 2026-11-15 (solution-samt-bu-docs#82) er det **plattform og redaksjonell ramme**; innhold med egen ansvarlig flyttes til
-moduler. Temaet finner repoet for en side selv (`page-repo.html`), så en ny modul krever ingen temaendring.
+moduler. Write i `samt-bu-docs`: `samt-bu-core-team`, `samt-bu-editorial` (Redaksjon, Cat og Erik), `content-bots` og testkontoen
+`erikhag1test`. `samt-bu-alle` har bare Read der (fra 2026-11-15), og Write på modulene Behov og Innsikt. Temaet finner repoet for en side selv (`page-repo.html`), så en ny modul krever ingen temaendring.
 Innholdsrepoene under er **Hugo-moduler** (`go.mod` + `content/`): `samt-bu-docs` henter
 dem via `[[module.imports]]` i `hugo.toml` og monterer `content/` på stien som står i tabellen.
 Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
