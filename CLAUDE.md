@@ -44,6 +44,7 @@ Modulstiene skrives `github.com/SAMT-X/...` med store bokstaver.
 | `content-legal` | `arkitektur/juss` | Juss, varig innhold (`scope-shared`), delprosjekt på linje med overordnet arkitektur og informasjonsarkitektur. Lå under `prosjektleveranser/rammeverk/juss` den første dagen (alias). Opprettet 2026-11-12 (`solution-task-management#51`); den lokale siden Juss i `samt-bu-docs` er flyttet hit med samme id. Første repo med prefikset `content-`. Oppgavene ligger i `samt-bu-legal`. Siden «Oppgaver og framdrift» viser tidslinjen for Project 21. |
 | `samt-bu-governance` | `styring` | Styring: arbeidsmodell, beslutningslogg, deltakere og tilgang, oppgaver og oppfølging, samlinger. Flyttet fra lokal `content/prosjektstyring/` i `samt-bu-docs` 2026-11-15 med historikk (`git filter-branch`), ny adresse `/styring/`, gamle adresser i `_redirects` (solution-samt-bu-docs#82). Eier: kjerneteamet. Ingen issues eller brett. |
 | `samt-bu-needs` | `behov` | Behov: de 31 casene (use cases) og andre behov. Flyttet fra lokal `content/behov/` i `samt-bu-docs` 2026-11-15 med historikk (233 commits), **samme adresse**. Write for `samt-bu-alle`. Sidekommentarene på case 24 (tidligere `samt-bu-docs` #97/#98) er overført hit som #1/#2 (solution-samt-bu-docs#82). |
+| `content-insight` | `innsikt` | Felles innsikt: EU og data spaces, FoU, medieoppslag, begrepsapparat. Varig (`scope-shared`). Flyttet fra lokal `content/innsikt/` i `samt-bu-docs` 2026-11-15 med historikk (72 commits), **samme adresse**. Write for `samt-bu-alle` (solution-samt-bu-docs#82). |
 | `samt-bu-drafts` | `utkast` | Utkast og forslag (use cases, piloter, temaer) |
 | `samt-bu-market-engagement` | `ekstern-markedsdialog` | Ekstern markedsdialog |
 | `solution-samt-bu-docs` | `prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs` | Dokumentasjon av selve docs-plattformen (brukerveiledning, teknisk, veikart) |
@@ -137,7 +138,7 @@ med tilpasningene under.
    Sjekk også datoen for tokenene på `samt-x-bot` (fine-grained, i Bitwarden). Utløpet kan ikke leses fra API-et, så
    varsle Erik under 30 dager før datoen her. Ny token: oppdater datoen her.
    - `BUILD_REPORT_TOKEN`: Actions-secret i `samt-bu-docs`, Issues read/write på `solution-samt-bu-docs`. **Utløper 2027-10-25.**
-   - `DOCS_REBUILD_TOKEN`: **org-secret** i `samt-x`, delt med de 16 modulrepoene (content-legal fra 2026-11-13, samt-bu-governance og samt-bu-needs fra 2026-11-15), Contents read/write på `samt-bu-docs`.
+   - `DOCS_REBUILD_TOKEN`: **org-secret** i `samt-x`, delt med de 17 modulrepoene (content-legal fra 2026-11-13, samt-bu-governance, samt-bu-needs og content-insight fra 2026-11-15), Contents read/write på `samt-bu-docs`.
      **Utløper 2027-10-25.**
    - `WORKER_PAT` (klassisk, `repo`) har **ingen utløpsdato**. Den brukes av Cloudflare-workeren («Foreslå endring») og skal byttes (solution-samt-bu-docs#85).
 
