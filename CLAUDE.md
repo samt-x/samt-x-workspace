@@ -193,7 +193,9 @@ Som i `session-start-prompts.md`, men:
   repoet endringen gjelder (f.eks. `samt-bu-architecture#31`, `samt-bu-common-tasks#69`).
 - **Minne:** docs-spesifikt i docs-minnet, GitHub-org og arbeid på tvers i workspace-minnet.
   Sesjonshistorikken (`project_sesjonshistorikk.md` i docs-minnet) er felles og har én nummerering.
-- **Backup:** kopier begge minnemappene til `claude-memory`, commit og push.
+- **Backup:** hooken `sync-memory.ps1` (PostToolUse, Write|Edit) kopierer begge minnemappene til `claude-memory` og committer
+  og pusher selv («Memory-oppdatering <tid>»), for workspace-minnet fra s121. Ved avslutning: sjekk bare at `claude-memory` er
+  ren og i takt (`git -C … status -sb`). Endringer gjort med Bash eller andre verktøy fanges ikke av hooken – kopier dem for hånd.
 - **Sesjonslogg:** `save-session-log.py` finner nyeste samtale uansett startmappe og virker herfra.
 - **Skjermbilder:** kopier bildene Erik har limt inn fra sesjonens midlertidige mappe
   (`%TEMP%\claude\<prosjektmappe>\<sesjons-id>\images\`, stien står i bildemeldingene) til
